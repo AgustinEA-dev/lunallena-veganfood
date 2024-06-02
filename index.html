@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app">
+    <header>
+
+      <nav class="nav">
+        <div class="logoAndBars">
+          <img id="bars-icon" src="./bars-solid (3).svg" alt="">
+          <img id="logo" src="./logo/5__1_-removebg-preview.png" alt="">
+        </div>
+
+        <div class="dropDown">
+          <li class="items"><a class="nav-link" href="#hero">Portada</a></li>
+          <li class="items"><a class="nav-link" href="#info">Quienes somos</a></li>
+          <li class="items"><a class="nav-link" href="#products">Productos</a></li>
+          <li class="items"><a class="nav-link" href="#footer">Contacto</a></li>
+        </div>
+
+        <div class="items-div">
+          <li class="items"><a class="nav-link" href="#hero">Portada</a></li>
+          <a class="nav-link" href="#info">Quienes somos</a></li>
+          <a class="nav-link" href="#products">Productos</a></li>
+          <a class="nav-link" href="#footer">Contacto</a></li>
+        </div>
+
+        <div class="cart">
+          <img id="cart-icon" src="./bag-shopping-solid.svg" alt="">
+        </div>
+
+        <div class="cart-content">
+          <div class="cart-product"></div>
+          <div class="empty-msg"></div>
+          <hr>
+          <h4 class="total"></h4>
+          <button class="buy-btn">Comprar</button>
+          <button class="empty-btn">Vaciar carrito</button>
+        </div>
+
+      </nav>
+    </header>
+
+    <section id="hero">
+      <div class="bg-img"></div>
+    </section>
+
+    <section id="info">
+      <p>“Nos dedicamos a la elaboración de alimentos veganos, todo casero y sin conservantes.”</p>
+    </section>
+
+    <section id="products">
+      <h1>Productos</h1>
+      <div class="search-container">
+        <input id="search" type="search" placeholder="Búsqueda">
+      </div>
+      <div class="products-container">
+        <!-- Acá renderizamos los productos -->
+      </div>
+    </section>
+
+    <div class="add-modal"></div>
+
+    </main>
+
+    <footer id="footer"></footer>
+  </div>
+  <script type="module" src="./assets/data/data.js"></script>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>

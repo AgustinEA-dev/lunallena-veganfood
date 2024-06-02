@@ -1,0 +1,35 @@
+@media (max-width: 1267px) {
+    .products-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:780px) {
+    .items-div a {
+        display: none;
+    }
+
+    #bars-icon {
+        display: flex;
+    }
+
+}
+
+@media(min-width: 780px) {
+    .dropDown {
+        display: none;
+    }
+}
+
+@media (max-width: 421px) {
+    .cart-content {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .products h1{
+        font-size: 40px;
+    }
+
+    
+}

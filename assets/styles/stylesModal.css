@@ -1,0 +1,21 @@
+.add-modal {
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: rgb(71, 149, 71);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: all 0.5s ease-out;
+    transform: translateY(200%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+
+.active-modal {
+    transform: translateY(0);
+    transition: all 0.5s ease-in;
+}

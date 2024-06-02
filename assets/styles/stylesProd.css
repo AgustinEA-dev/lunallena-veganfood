@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    /* padding-top: 40px; */
+}
+
+h1 {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+    padding: 40px;
+    /* margin: 40px 0 40px 0; */
+}
+
+input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    background-color: rgb(29, 29, 29);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 10px;
+    /* font-family: "Freeman", sans-serif; */
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+.cardImg {
+    width: 250px;
+    padding: 0;
+}
+
+.products-container {
+    padding-top: 40px;
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.btn-add {
+    cursor: pointer;
+    background-color: #FFB930;
+    color: #18282f;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 10px 5px 2px;
+    font-size: 18px;
+    padding: 6px;
+    width: 100px;
+}
