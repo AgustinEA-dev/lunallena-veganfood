@@ -243,10 +243,38 @@ const resetCartItems = () => {
     updateCartState();
 };
 
+//  Función para completar la compra.
 
-//  Función para completar la compra o vaciar el carrito.
+const completeCartActionBuy = (confirmMsg) => {
+    if (!cart.length) return;
 
-const completeCartAction = (confirmMsg) => {
+    const confirm = {
+        title: '¿Desea confirmar su compra?',
+        icon: 'question',
+        confirmButtonText: 'Aceptar'
+    }
+
+    const exito = {
+        title: '¡Muchas gracias!',
+        text: 'Tu compra ya fue confirmada.',
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+    }
+
+    Swal.fire(confirm)
+        .then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(exito)
+                cartProduct.innerHTML = ""
+                resetCartItems()
+            }
+        })
+};
+
+
+//  Función para vaciar el carrito.
+
+const completeCartActionDelete = (confirmMsg) => {
     if (!cart.length) return;
 
     const confirm = {
@@ -266,6 +294,7 @@ const completeCartAction = (confirmMsg) => {
         .then((result) => {
             if (result.isConfirmed) {
                 Swal.fire(exito)
+                cartProduct.innerHTML = ""
                 resetCartItems()
             }
         })
@@ -276,12 +305,12 @@ const completeCartAction = (confirmMsg) => {
 
 
 const completeBuy = () => {
-    completeCartAction("¿Desea completar su compra?", "Gracias por su compra");
+    completeCartActionBuy();
 };
 
 
 const deleteCart = () => {
-    completeCartAction()
+    completeCartActionDelete()
 }
 
 
