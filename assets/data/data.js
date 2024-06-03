@@ -4,7 +4,15 @@ export const productsData = [
         precio: 600,
         // precioDocena: 5500,
         // precioMediaDocena: 2750,
-        img: './productos/IMG_1389 (1).jpg',
+        img: './productos/medallones-calabaza.png',
+        id: 1
+    },
+    {
+        name: 'Medallón Mix veg.',
+        precio: 600,
+        // precioDocena: 5500,
+        // precioMediaDocena: 2750,
+        img: './productos/medallones-mixVegetales.png',
         id: 1
     },
     {
@@ -12,7 +20,7 @@ export const productsData = [
         precio: 600,
         // precioDocena: 5500,
         // precioMediaDocena: 2750,
-        img: './productos/IMG_1397 (1).jpg',
+        img: './productos/medallones-remolacha.png',
         id: 2
     },
     {
@@ -20,39 +28,45 @@ export const productsData = [
         precio: 600,
         // precioDocena: 5500,
         // precioMediaDocena: 2750,
-        img: './productos/IMG_1400 (1).jpg',
+        img: './productos/medallones-arbejas.png',
+        id: 3
+    },
+    {
+        name: 'Medallón variedades',
+        precio: 600,
+        // precioDocena: 5500,
+        // precioMediaDocena: 2750,
+        img: './productos/medallones-variedades.png',
         id: 3
     },
     {
         name: 'Guiso de lentejas',
         precio: 2500,
-        img: './productos/guiso.jpeg',
+        img: './productos/guiso-lentejas.png',
         id: 4
     },
     {
         name: 'Arrollados rellenos',
         precio: 2000,
-        img: './productos/arrollados.jpeg',
+        img: './productos/arrollados.png',
         id: 5
     },
     {
         name: 'Focaccia',
         precio: 2500,
-        img: './productos/focaccia.jpeg',
+        img: './productos/focaccia.png',
         id: 6
     },
     {
         name: 'Pan integral con semillas',
         precio: 2500,
-        img: './productos/panes.jpeg',
+        img: './productos/panes.png',
         id: 7
     },
     {
         name: 'Bifes de seitan',
         precio: 300,
-        // precioDocena: 5500,
-        // precioMediaDocena: 2750,
-        img: './productos/Bife-seitan.jpg',
+        img: './productos/Bife-seitan.png',
         id: 7
     },
 ]
