@@ -248,15 +248,30 @@ const resetCartItems = () => {
 
 const completeCartAction = (confirmMsg) => {
     if (!cart.length) return;
-    if (window.confirm(confirmMsg)) {
-        resetCartItems();
-        Swal.fire({
-            title: 'Artículos eliminados',
-            text: 'No hay más productos en el carrito',
-            icon: 'success',
-            confirmButtonText: 'Aceptar'
-        })
+
+    const confirm = {
+        title: '¿Desea eliminar los productos del carrito?',
+        icon: 'question',
+        confirmButtonText: 'Aceptar'
     }
+
+    const exito = {
+        title: 'Artículos eliminados',
+        text: 'No hay más productos en el carrito',
+        icon: 'success',
+    }
+
+    Swal.fire(confirm)
+        .then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(exito)
+                resetCartItems()
+                setTimeout(() => {
+                    window.location.reload()
+                }, 1200);
+
+            }
+        })
 };
 
 
@@ -269,7 +284,7 @@ const completeBuy = () => {
 
 
 const deleteCart = () => {
-    completeCartAction('¿Desea eliminar los productos del carrito?')
+    completeCartAction()
 }
 
 

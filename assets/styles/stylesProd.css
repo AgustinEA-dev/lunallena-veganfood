@@ -37,8 +37,6 @@ input {
     font-style: normal;
 }
 
-
-
 .cardImg {
     width: 250px;
     padding: 0;
@@ -81,7 +79,7 @@ input {
     color: #18282f;
     border: none;
     border-radius: 10px;
-    box-shadow: 10px 5px 2px;
+    box-shadow: 0 5px 3px;
     font-size: 18px;
     padding: 6px;
     width: 100px;
