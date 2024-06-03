@@ -259,6 +259,7 @@ const completeCartAction = (confirmMsg) => {
         title: 'Artículos eliminados',
         text: 'No hay más productos en el carrito',
         icon: 'success',
+        confirmButtonText: 'Aceptar'
     }
 
     Swal.fire(confirm)
@@ -266,10 +267,6 @@ const completeCartAction = (confirmMsg) => {
             if (result.isConfirmed) {
                 Swal.fire(exito)
                 resetCartItems()
-                setTimeout(() => {
-                    window.location.reload()
-                }, 1200);
-
             }
         })
 };
