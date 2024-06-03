@@ -1,7 +1,14 @@
-export let cart = JSON.parse(localStorage.getItem("cart")) || []
+// Dependecias
+
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 // cart
+
+export let cart = JSON.parse(localStorage.getItem("cart")) || []
+
 const cartContent = document.querySelector('.cart-content')
+const cartBubble = document.querySelector(".cart-bubble");
 const addBtn = document.querySelector('btn-add')
 const cartProduct = document.querySelector('.cart-product')
 const emptyMsg = document.querySelector('.empty-msg')
@@ -68,7 +75,9 @@ const showCartTotal = () => {
     total.innerHTML = `Total: $${getCartTotal()}`;
 };
 
+
 // Función para desabilitar botones
+
 
 const disableBtn = (btn) => {
     if (!cart.length) {
@@ -79,6 +88,16 @@ const disableBtn = (btn) => {
 }
 
 
+
+//  Función para actualizar la burbuja de cantidad con el número de productos en el carrito
+
+
+
+const renderCartBubble = () => {
+    cartBubble.textContent = cart.reduce((acc, cur) => acc + cur.quantity, 0);
+};
+
+
 // Función que ejecuta las funciones necesarias para actualizar el estado del carrito. 
 
 const updateCartState = () => {
@@ -87,6 +106,7 @@ const updateCartState = () => {
     showCartTotal();
     disableBtn(buyBtn)
     disableBtn(emptyBtn)
+    renderCartBubble()
 };
 
 
@@ -226,11 +246,16 @@ const resetCartItems = () => {
 
 //  Función para completar la compra o vaciar el carrito.
 
-const completeCartAction = (confirmMsg, successMsg) => {
+const completeCartAction = (confirmMsg) => {
     if (!cart.length) return;
     if (window.confirm(confirmMsg)) {
         resetCartItems();
-        alert(successMsg);
+        Swal.fire({
+            title: 'Artículos eliminados',
+            text: 'No hay más productos en el carrito',
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+        })
     }
 };
 
@@ -244,7 +269,7 @@ const completeBuy = () => {
 
 
 const deleteCart = () => {
-    completeCartAction("¿Desea vaciar el carrito?", "No hay mas productos en el carrito")
+    completeCartAction('¿Desea eliminar los productos del carrito?')
 }
 
 
@@ -257,5 +282,6 @@ export const cartSectionInit = () => {
     cartContent.addEventListener('click', handleQuantity)
     buyBtn.addEventListener("click", completeBuy);
     emptyBtn.addEventListener("click", deleteCart);
+    renderCartBubble(cart)
 }
 
