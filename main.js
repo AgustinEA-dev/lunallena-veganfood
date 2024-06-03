@@ -16,11 +16,6 @@ import { productsSectionInit } from './assets/products-section/products-section.
 import { navSectionInit } from './assets/nav-section/nav-section.js'
 import { cartSectionInit } from './assets/cart-section/cart-section.js'
 
-// Dependecias
-
-import Swal from 'sweetalert2/dist/sweetalert2.js'
-import 'sweetalert2/src/sweetalert2.scss'
-
 // Función incializadora main
 
 const init = () => {

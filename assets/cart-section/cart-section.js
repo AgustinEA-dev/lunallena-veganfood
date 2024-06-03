@@ -251,7 +251,8 @@ const completeCartActionBuy = (confirmMsg) => {
     const confirm = {
         title: '¿Desea confirmar su compra?',
         icon: 'question',
-        confirmButtonText: 'Aceptar'
+        confirmButtonText: 'Aceptar',
+        allowOutsideClick: false
     }
 
     const exito = {
@@ -280,7 +281,8 @@ const completeCartActionDelete = (confirmMsg) => {
     const confirm = {
         title: '¿Desea eliminar los productos del carrito?',
         icon: 'question',
-        confirmButtonText: 'Aceptar'
+        confirmButtonText: 'Aceptar',
+        allowOutsideClick: false
     }
 
     const exito = {
