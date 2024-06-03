@@ -10,6 +10,8 @@ import './assets/styles/stylesProd.css'
 import './assets/styles/animations.css'
 import './assets/styles/mediaquery.css'
 
+import 'animate.css'
+
 // Funciones 
 
 import { productsSectionInit } from './assets/products-section/products-section.js'

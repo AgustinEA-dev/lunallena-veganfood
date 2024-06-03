@@ -38,7 +38,7 @@ input {
 }
 
 .cardImg {
-    width: 250px;
+    width: 170px;
     padding: 0;
 }
 
@@ -59,6 +59,9 @@ input {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    background-color: #18282f;
+    color: white;
+    padding: 10px;
 }
 
 .price {
@@ -77,9 +80,7 @@ input {
     cursor: pointer;
     background-color: #FFB930;
     color: #18282f;
-    border: none;
     border-radius: 10px;
-    box-shadow: 0 5px 3px;
     font-size: 18px;
     padding: 6px;
     width: 100px;

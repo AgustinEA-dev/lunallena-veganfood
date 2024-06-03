@@ -6,8 +6,8 @@ export const productsContainer = document.querySelector('.products-container')
 const input = document.querySelector('#search')
 
 
-
 // Creación de template de productos
+
 
 const createProductTemplate = (product) => {
     const { id, name, precio, img } = product
