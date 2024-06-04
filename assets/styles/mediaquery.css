@@ -27,9 +27,15 @@
         border-radius: 0px;
     }
 
-    .products h1{
+    .products h1 {
         font-size: 40px;
     }
 
-    
+
+}
+
+@media (max-width: 388px) {
+    .cardImg {
+        width: 220px;
+    }
 }
