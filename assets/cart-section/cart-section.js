@@ -200,6 +200,7 @@ const handleMinusBtnEvent = (id) => {
     substractProductUnit(existingCartProduct);
 };
 
+
 //  Función para quitar una unidad de producto.
 
 
@@ -243,7 +244,9 @@ const resetCartItems = () => {
     updateCartState();
 };
 
+
 //  Función para completar la compra.
+
 
 const completeCartActionBuy = (confirmMsg) => {
     if (!cart.length) return;
@@ -274,6 +277,7 @@ const completeCartActionBuy = (confirmMsg) => {
 
 
 //  Función para vaciar el carrito.
+
 
 const completeCartActionDelete = (confirmMsg) => {
     if (!cart.length) return;

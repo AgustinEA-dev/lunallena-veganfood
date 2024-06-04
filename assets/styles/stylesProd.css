@@ -38,7 +38,7 @@ input {
 }
 
 .cardImg {
-    width: fit-content;
+    width: 150px;
     padding: 0;
 }
 
@@ -86,4 +86,12 @@ input {
     font-size: 18px;
     padding: 6px;
     width: 100px;
+}
+
+.infoProduct{
+    width: 155px;
+}
+
+.h2Prod {
+    font-size: 15px;
 }

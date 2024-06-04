@@ -9,6 +9,7 @@ import './assets/styles/stylesNav.css'
 import './assets/styles/stylesProd.css'
 import './assets/styles/animations.css'
 import './assets/styles/mediaquery.css'
+import './assets/styles/stylesContactForm.css'
 
 import 'animate.css'
 
@@ -17,6 +18,7 @@ import 'animate.css'
 import { productsSectionInit } from './assets/products-section/products-section.js'
 import { navSectionInit } from './assets/nav-section/nav-section.js'
 import { cartSectionInit } from './assets/cart-section/cart-section.js'
+import { contactSectionInit } from './assets/contact-section/contact-section.js'
 
 // Función incializadora main
 
@@ -24,6 +26,7 @@ const init = () => {
     productsSectionInit()
     navSectionInit()
     cartSectionInit()
+    contactSectionInit()
 }
 init()
 

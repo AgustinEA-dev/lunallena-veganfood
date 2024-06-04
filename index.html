@@ -13,7 +13,12 @@
 
 <body>
   <div id="app">
+
+    <!-- -----------------------------HEADER----------------------------- -->
+
     <header>
+
+      <!-- -----------------------------NAVBAR----------------------------- -->
 
       <nav class="nav">
         <div class="logoAndBars">
@@ -25,16 +30,18 @@
           <li class="items"><a class="nav-link" href="#info">Quienes somos</a></li>
           <li class="items"><a class="nav-link" href="#hero">Portada</a></li>
           <li class="items"><a class="nav-link" href="#products">Productos</a></li>
-          <li class="items"><a class="nav-link" href="#footer">Contacto</a></li>
+          <li class="items"><a class="nav-link" href="#contact">Contacto</a></li>
         </div>
 
         <div class="items-div">
           <li class="items"><a class="nav-link" href="#hero">Portada</a></li>
           <a class="nav-link" href="#info">Quienes somos</a></li>
           <a class="nav-link" href="#products">Productos</a></li>
-          <a class="nav-link" href="#footer">Contacto</a></li>
+          <a class="nav-link" href="#contact">Contacto</a></li>
         </div>
-        
+
+        <!-- -----------------------------CART----------------------------- -->
+
         <div class="cart">
           <img id="cart-icon" src="./bag-shopping-solid.svg" alt="">
           <div class="cart-label">
@@ -57,13 +64,19 @@
       </nav>
     </header>
 
+    <!-- -----------------------------HERO----------------------------- -->
+
     <section id="hero">
       <div data-aos="zoom-in" class="bg-img"></div>
     </section>
 
+    <!-- -----------------------------INFO----------------------------- -->
+
     <section id="info">
       <p>“Nos dedicamos a la elaboración de alimentos veganos, todo casero y sin conservantes.”</p>
     </section>
+
+    <!-- -----------------------------PRODUCTS----------------------------- -->
 
     <section id="products">
       <h1>Productos</h1>
@@ -77,12 +90,29 @@
 
     <div class="add-modal"></div>
 
+    <!-- -----------------------------CONTACT----------------------------- -->
+
+    <section id="contact">
+      <h1>Contacto</h1>
+      <form class="contact-form">
+        <label for="name"></label>
+        <input type="text" name="name" id="name" placeholder="Nombre">
+        <label for="email"></label>
+        <input type="email" name="email" id="email" placeholder="Email">
+        <textarea name="" id="text-area" placeholder="Mensaje"></textarea>
+        <button class="submit-btn">Submit</button>
+      </form>
+
+    </section>
+
+
     </main>
 
     <footer id="footer"></footer>
   </div>
   <script type="module" src="./assets/data/data.js"></script>
   <script type="module" src="./main.js"></script>
+  <!-- <script src="./assets/contact-section/"></script> -->
 </body>
 
 </html>

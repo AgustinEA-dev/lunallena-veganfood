@@ -13,9 +13,11 @@ const createProductTemplate = (product) => {
     const { id, name, precio, img } = product
     return `<div class="card-container">
 <img class="cardImg" src="${img}" alt="${name}">
-<h2>${name}</h2>
+<div class="infoProduct">
+<h2 class ="h2Prod">${name}</h2>
 <h3>Precio x unidad: $${precio}</h3>
 <h4>Cod: ${id}</h4>
+</div>
 <button class="btn-add"
 data-id='${id}'
 data-name='${name}'
