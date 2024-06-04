@@ -13,7 +13,7 @@ export const productsData = [
         // precioDocena: 5500,
         // precioMediaDocena: 2750,
         img: './productos/medallones-mixVegetales.png',
-        id: 1
+        id: 2
     },
     {
         name: 'Medallón de remolacha',
@@ -21,7 +21,7 @@ export const productsData = [
         // precioDocena: 5500,
         // precioMediaDocena: 2750,
         img: './productos/medallones-remolacha.png',
-        id: 2
+        id: 3
     },
     {
         name: 'Medallón de arbejas',
@@ -29,7 +29,7 @@ export const productsData = [
         // precioDocena: 5500,
         // precioMediaDocena: 2750,
         img: './productos/medallones-arbejas.png',
-        id: 3
+        id: 4
     },
     {
         name: 'Medallón variedades',
@@ -37,37 +37,37 @@ export const productsData = [
         // precioDocena: 5500,
         // precioMediaDocena: 2750,
         img: './productos/medallones-variedades.png',
-        id: 3
+        id: 5
     },
     {
         name: 'Guiso de lentejas',
         precio: 2500,
         img: './productos/guiso-lentejas.png',
-        id: 4
+        id: 6
     },
     {
         name: 'Arrollados rellenos',
         precio: 2000,
         img: './productos/arrollados.png',
-        id: 5
+        id: 7
     },
     {
         name: 'Focaccia',
         precio: 2500,
         img: './productos/focaccia.png',
-        id: 6
+        id: 8
     },
     {
         name: 'Pan integral con semillas',
         precio: 2500,
         img: './productos/panes.png',
-        id: 7
+        id: 9
     },
     {
         name: 'Bifes de seitan',
         precio: 300,
         img: './productos/Bife-seitan.png',
-        id: 7
+        id: 10
     },
 ]
 
