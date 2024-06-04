@@ -192,12 +192,55 @@ const handleMinusBtnEvent = (id) => {
     const existingCartProduct = cart.find((item) => item.id == id)
 
     if (existingCartProduct.quantity === 1) {
-        if (window.confirm("¿Desea Eliminar el producto del carrito?")) {
-            removeProductFromCart(existingCartProduct);
+
+        const confirm = {
+            title: '¿Desea eliminar este producto?',
+            icon: 'question',
+            iconColor: "#18282f",
+            confirmButtonText: 'Aceptar',
+            showCancelButton: true,
+            cancelButtonColor: "#d33",
+            color: "#18282f",
+            allowOutsideClick: false,
+            toast: true,
+            position: "top-end",
+            width: "260px",
+            // backdrop: true
+            // height:"70px",
         }
-        return;
+
+        const exito = {
+            title: '¡Perfecto!',
+            text: 'Producto eliminado.',
+            icon: 'success',
+            showConfirmButton: false,
+            iconColor: "#18282f",
+            color: "#18282f",
+            toast: true,
+            position: "top-end",
+            timer: 2500,
+            width: "260px",
+            // backdrop: true
+            // height: "500px",
+        }
+
+        Swal.fire(confirm)
+            .then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(exito)
+                    substractProductUnit(existingCartProduct);
+                    cartProduct.innerHTML = ""
+                    resetCartItems()
+                }
+            })
+
+
+        // if (window.confirm("¿Desea Eliminar el producto del carrito?")) {
+        //     removeProductFromCart(existingCartProduct);
+        // }
+        // return;
     }
-    substractProductUnit(existingCartProduct);
+
 };
 
 
@@ -255,6 +298,8 @@ const completeCartActionBuy = (confirmMsg) => {
         title: '¿Desea confirmar su compra?',
         icon: 'question',
         confirmButtonText: 'Aceptar',
+        showCancelButton: true,
+        cancelButtonColor: "#d33",
         allowOutsideClick: false
     }
 
@@ -262,7 +307,7 @@ const completeCartActionBuy = (confirmMsg) => {
         title: '¡Muchas gracias!',
         text: 'Tu compra ya fue confirmada.',
         icon: 'success',
-        confirmButtonText: 'Aceptar'
+        confirmButtonText: 'Aceptar',
     }
 
     Swal.fire(confirm)
@@ -286,6 +331,8 @@ const completeCartActionDelete = (confirmMsg) => {
         title: '¿Desea eliminar los productos del carrito?',
         icon: 'question',
         confirmButtonText: 'Aceptar',
+        showCancelButton: true,
+        cancelButtonColor: "#d33",
         allowOutsideClick: false
     }
 
