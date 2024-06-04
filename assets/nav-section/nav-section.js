@@ -56,4 +56,5 @@ export const navSectionInit = () => {
     navBar.addEventListener('click', closeOnClick)
     cartBtn.addEventListener('click', cartContentDisplay)
     window.addEventListener('scroll', closeOnScroll)
+    // window.addEventListener('scroll', handleHideScroll)
 }
