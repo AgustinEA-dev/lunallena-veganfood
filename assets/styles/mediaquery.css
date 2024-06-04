@@ -38,7 +38,12 @@
     .cardImg {
         width: 220px;
     }
+
     .h2Prod {
         font-size: 23px;
+    }
+
+    .infoProduct {
+        width: 225px;
     }
 }
