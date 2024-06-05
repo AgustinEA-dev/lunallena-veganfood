@@ -16,17 +16,23 @@ const buyBtn = document.querySelector('.buy-btn')
 const emptyBtn = document.querySelector('.empty-btn')
 const total = document.querySelector('.total')
 
+
 // modal
+
 
 const successModal = document.querySelector(".add-modal");
 
+
 // Función para guardar en el carrito.
+
 
 const saveCart = () => {
     localStorage.setItem("cart", JSON.stringify(cart))
 }
 
+
 // Creación de template para productos del carrito
+
 
 const createCartProductTemplate = (cartProduct) => {
     const { id, name, precio, img, quantity } = cartProduct;
@@ -62,7 +68,9 @@ const renderCart = () => {
     cartProduct.innerHTML = cart.map(createCartProductTemplate).join("");
 }
 
+
 // Función para obtener el total de la compra
+
 
 const getCartTotal = () => {
     return cart.reduce((acc, cur) => acc + Number(cur.precio) * cur.quantity, 0);
@@ -70,6 +78,7 @@ const getCartTotal = () => {
 
 
 // Función para mostrar el total de la compra0
+
 
 const showCartTotal = () => {
     total.innerHTML = `Total: $${getCartTotal()}`;
@@ -88,9 +97,7 @@ const disableBtn = (btn) => {
 }
 
 
-
 //  Función para actualizar la burbuja de cantidad con el número de productos en el carrito
-
 
 
 const renderCartBubble = () => {
@@ -99,6 +106,7 @@ const renderCartBubble = () => {
 
 
 // Función que ejecuta las funciones necesarias para actualizar el estado del carrito. 
+
 
 const updateCartState = () => {
     saveCart();
@@ -126,6 +134,7 @@ export const addProduct = (e) => {
     }
     updateCartState()
 }
+
 
 //  * Función para agregar una unidad a un producto que ya este en el carrito.
 
