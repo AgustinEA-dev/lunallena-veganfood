@@ -189,6 +189,7 @@ const handlePlusBtnEvent = (id) => {
 
 
 const handleMinusBtnEvent = (id) => {
+
     const existingCartProduct = cart.find((item) => item.id == id)
 
     if (existingCartProduct.quantity === 1) {
@@ -196,17 +197,13 @@ const handleMinusBtnEvent = (id) => {
         const confirm = {
             title: '¿Desea eliminar este producto?',
             icon: 'question',
-            iconColor: "#18282f",
+            // iconColor: "#18282f",
             confirmButtonText: 'Aceptar',
             showCancelButton: true,
             cancelButtonColor: "#d33",
             color: "#18282f",
             allowOutsideClick: false,
-            toast: true,
-            position: "top-end",
             width: "260px",
-            // backdrop: true
-            // height:"70px",
         }
 
         const exito = {
@@ -214,33 +211,23 @@ const handleMinusBtnEvent = (id) => {
             text: 'Producto eliminado.',
             icon: 'success',
             showConfirmButton: false,
-            iconColor: "#18282f",
+            // iconColor: "#00ff00",
             color: "#18282f",
-            toast: true,
-            position: "top-end",
             timer: 2500,
             width: "260px",
-            // backdrop: true
-            // height: "500px",
         }
 
         Swal.fire(confirm)
             .then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire(exito)
-                    substractProductUnit(existingCartProduct);
+                    removeProductFromCart(existingCartProduct);
                     cartProduct.innerHTML = ""
                     resetCartItems()
                 }
             })
-
-
-        // if (window.confirm("¿Desea Eliminar el producto del carrito?")) {
-        //     removeProductFromCart(existingCartProduct);
-        // }
-        // return;
     }
-
+    substractProductUnit(existingCartProduct);
 };
 
 
@@ -300,7 +287,7 @@ const completeCartActionBuy = (confirmMsg) => {
         confirmButtonText: 'Aceptar',
         showCancelButton: true,
         cancelButtonColor: "#d33",
-        allowOutsideClick: false
+        allowOutsideClick: false,
     }
 
     const exito = {

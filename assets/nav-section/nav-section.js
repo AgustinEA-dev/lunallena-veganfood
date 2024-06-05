@@ -6,6 +6,22 @@ const barsMenu = document.querySelector('#bars-icon')
 const cartContent = document.querySelector('.cart-content')
 
 
+// Función para ocultar la barra de navegación on scroll
+
+
+let lastScrollY = window.scrollY
+
+const handleHideScroll = () => {
+    if (lastScrollY < window.scrollY) {
+        
+        navBar.classList.add('nav--hidden')
+    } else {
+
+        navBar.classList.remove('nav--hidden')
+    }
+}
+
+
 // Función para el display del dropdown menú y ocultar el cart content.
 
 
@@ -56,5 +72,5 @@ export const navSectionInit = () => {
     navBar.addEventListener('click', closeOnClick)
     cartBtn.addEventListener('click', cartContentDisplay)
     window.addEventListener('scroll', closeOnScroll)
-    // window.addEventListener('scroll', handleHideScroll)
+    window.addEventListener('scroll', handleHideScroll)
 }
