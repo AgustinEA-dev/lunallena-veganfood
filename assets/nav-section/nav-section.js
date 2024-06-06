@@ -9,17 +9,17 @@ const overlay = document.querySelector('.overlay')
 // Función para ocultar la barra de navegación on scroll
 
 
-let lastScrollY = window.scrollY
+// let lastScrollY = window.scrollY
 
-const handleHideScroll = () => {
-    if (lastScrollY < window.scrollY) {
+// const handleHideScroll = () => {
+//     if (lastScrollY < window.scrollY) {
 
-        navBar.classList.add('nav--hidden')
-    } else {
+//         navBar.classList.add('nav--hidden')
+//     } else {
 
-        navBar.classList.remove('nav--hidden')
-    }
-}
+//         navBar.classList.remove('nav--hidden')
+//     }
+// }
 
 
 // Función para el display del dropdown menú y ocultar el cart content.
