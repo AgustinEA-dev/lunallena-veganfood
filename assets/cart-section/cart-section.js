@@ -202,7 +202,7 @@ const handleMinusBtnEvent = (id) => {
     const existingCartProduct = cart.find((item) => item.id == id)
 
     if (existingCartProduct.quantity === 1) {
-
+        console.log(existingCartProduct)
         const confirm = {
             title: '¿Desea eliminar este producto?',
             icon: 'question',
@@ -231,9 +231,9 @@ const handleMinusBtnEvent = (id) => {
                 if (result.isConfirmed) {
                     Swal.fire(exito)
                     removeProductFromCart(existingCartProduct);
-                    cartProduct.innerHTML = ""
-                    resetCartItems()
+
                 }
+
             })
     }
     substractProductUnit(existingCartProduct);
@@ -270,7 +270,6 @@ const handleQuantity = (e) => {
     } else if (e.target.classList.contains("up")) {
         handlePlusBtnEvent(e.target.dataset.id);
     }
-    cartProduct.innerHTML = ""
     updateCartState();
 }
 
