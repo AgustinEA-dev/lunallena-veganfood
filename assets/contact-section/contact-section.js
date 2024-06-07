@@ -20,13 +20,15 @@ const setError = (element, message) => {
 // Function to set success
 
 
-const setSuccess = element => {
+const setSuccess = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
 
-    errorDisplay.innerText = '';
+    errorDisplay.innerText = message;
+    errorDisplay.classList.add('success')
     inputControl.classList.add('success');
     inputControl.classList.remove('error');
+
 };
 
 
@@ -37,6 +39,9 @@ const isValidEmail = email => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
+
+
+
 
 
 // Function to validate inputs
@@ -50,7 +55,7 @@ const validateInputs = () => {
     if (usernameValue === '') {
         setError(username, 'Este campo es obligatorio.');
     } else {
-        setSuccess(username);
+        setSuccess(username, '¡Se bién!');
     }
 
     if (emailValue === '') {
@@ -58,13 +63,13 @@ const validateInputs = () => {
     } else if (!isValidEmail(emailValue)) {
         setError(email, 'Por favor ingresá un email válido.');
     } else {
-        setSuccess(email);
+        setSuccess(email, '¡Se ve bien!');
     }
 
     if (textAreaValue === '') {
         setError(textArea, 'Por favor, ingresá un mensaje.');
     } else {
-        setSuccess(textArea)
+        setSuccess(textArea, '¡Se ve bien!')
     }
 };
 
