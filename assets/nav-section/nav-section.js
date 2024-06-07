@@ -28,7 +28,7 @@ const overlay = document.querySelector('.overlay')
 const dropDown = () => {
     dropDownMenu.classList.toggle('dropDown-display')
     cartContent.classList.remove('cart-content-display')
-    overlay.classList.toggle("show-overlay");
+    // overlay.classList.toggle("show-overlay");
 }
 
 // Función para cerrar el dropDownd cuando hacemos un click en algúno de sus links.
@@ -73,7 +73,7 @@ const closeOnScroll = () => {
 
 
 const closeOnOverlayClick = () => {
-    cartContent.classList.toggle('cart-content-display')
+    cartContent.classList.remove('cart-content-display')
     dropDownMenu.classList.remove('dropDown-display')
     overlay.classList.toggle("show-overlay");
 };
