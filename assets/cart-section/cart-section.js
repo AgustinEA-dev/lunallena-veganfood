@@ -212,7 +212,8 @@ const handleMinusBtnEvent = (id) => {
             cancelButtonColor: "#d33",
             color: "#18282f",
             allowOutsideClick: false,
-            width: "260px",
+            allowEscapeKey: true
+            // width: "260px",
         }
 
         const exito = {
@@ -223,7 +224,7 @@ const handleMinusBtnEvent = (id) => {
             // iconColor: "#00ff00",
             color: "#18282f",
             timer: 2500,
-            width: "260px",
+            // width: "260px",
         }
 
         Swal.fire(confirm)
@@ -296,6 +297,7 @@ const completeCartActionBuy = (confirmMsg) => {
         showCancelButton: true,
         cancelButtonColor: "#d33",
         allowOutsideClick: false,
+        allowEscapeKey: true
     }
 
     const exito = {
@@ -303,6 +305,7 @@ const completeCartActionBuy = (confirmMsg) => {
         text: 'Tu compra ya fue confirmada.',
         icon: 'success',
         confirmButtonText: 'Aceptar',
+        allowEscapeKey: true
     }
 
     Swal.fire(confirm)

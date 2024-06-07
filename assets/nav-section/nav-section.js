@@ -88,6 +88,6 @@ export const navSectionInit = () => {
     navBar.addEventListener('click', closeOnClick)
     cartBtn.addEventListener('click', cartContentDisplay)
     window.addEventListener('scroll', closeOnScroll)
-    window.addEventListener('scroll', handleHideScroll)
+    // window.addEventListener('scroll', handleHideScroll)
     overlay.addEventListener('click', closeOnOverlayClick)
 }

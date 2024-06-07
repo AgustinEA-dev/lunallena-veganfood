@@ -1,12 +1,15 @@
 import { productsData, appState } from "../data/data.js"
 import { addProduct } from "../cart-section/cart-section.js"
 
+
 // products
+
+
 export const productsContainer = document.querySelector('.products-container')
 const input = document.querySelector('#search')
 
 
-// Creación de template de productos
+// Function to create template for products.
 
 
 const createProductTemplate = (product) => {
@@ -27,7 +30,9 @@ data-precio='${precio}'
 </div>`
 }
 
-// Función para renderizar lsita de productos
+
+// Function to render products.
+
 
 const renderProducts = (productList) => {
     productsContainer.innerHTML = ""
@@ -36,7 +41,9 @@ const renderProducts = (productList) => {
         .join("")
 }
 
-// Función para filtrar productos
+
+// Function to filter products.
+
 
 const handleSearch = () => {
     const searchTerm = input.value.toLowerCase()
@@ -45,7 +52,9 @@ const handleSearch = () => {
     renderProducts(filteredProducts)
 }
 
-// Función para incializar products-section
+
+// Function to init product section.
+
 
 export const productsSectionInit = () => {
     renderProducts(appState.products[0])

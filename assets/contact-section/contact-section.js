@@ -1,43 +1,80 @@
-const form = document.querySelector('.contact-form')
-const submitBtn = document.querySelector('.submit-btn')
-const nameInput = document.querySelector('#name')
-const emailInput = document.querySelector('#email')
+const form = document.getElementById('form');
+const username = document.getElementById('username');
+const email = document.getElementById('email')
+const textArea = document.getElementById('text-area')
 
 
-// Función para prevenir el default del formulario.
+// Function to set error
 
 
-const preventDefault = (e) => {
-    e.preventDefault()
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success')
 }
 
 
-// Función para validar nameInput.
+// Function to set success
 
 
-export const nameValidator = nameInput.addEventListener('input', (e) => {
-    if (!nameInput.attributes.type.value === 'text') {
-        nameInput.setCustomValidity('El nombre es obligatorio')
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
+
+
+// Function to create literal expression 
+
+
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+
+// Function to validate inputs
+
+
+const validateInputs = () => {
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const textAreaValue = textArea.value.trim()
+
+    if (usernameValue === '') {
+        setError(username, 'Este campo es obligatorio.');
     } else {
-        nameInput.setCustomValidity('')
+        setSuccess(username);
     }
-})
 
-
-// Función para validar emailInput.
-
-export const emailValidator = emailInput.addEventListener('input', (e) => {
-    if (emailInput.validity.typeMismatch) {
-        emailInput.setCustomValidity('Ingresá un email válido')
+    if (emailValue === '') {
+        setError(email, 'Este campo es obligatorio.');
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Por favor ingresá un email válido.');
     } else {
-        emailInput.setCustomValidity('')
+        setSuccess(email);
     }
-})
+
+    if (textAreaValue === '') {
+        setError(textArea, 'Por favor, ingresá un mensaje.');
+    } else {
+        setSuccess(textArea)
+    }
+};
+
+
+// Function to init constact section
 
 
 export const contactSectionInit = () => {
-    form.addEventListener('submit', preventDefault)
-    emailValidator
-    nameValidator
-    console.dir(nameInput)
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        validateInputs();
+    });
 }
