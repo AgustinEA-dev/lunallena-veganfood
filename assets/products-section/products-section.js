@@ -5,9 +5,9 @@ import { addProduct } from "../cart-section/cart-section.js"
 // products
 
 
-export const productsContainer = document.querySelector('.products-container')
+const productsContainer = document.querySelector('.products-container')
 const input = document.querySelector('#search')
-export const notFoundError = document.querySelector('.notFoundError')
+const notFoundError = document.querySelector('.notFoundError')
 
 
 // Function to create template for products.
@@ -48,11 +48,9 @@ const handleSearch = () => {
     const searchTerm = input.value.toLowerCase()
     const filteredProducts = productsData.filter((product) =>
         product.name.toLowerCase().startsWith(searchTerm))
-
-    // productsContainer.innerHTML = ""
-
     if (!filteredProducts) {
-        notFoundError.classList.toggle('notFoundError-display')
+        // productsContainer.innerHTML = ""
+        notFoundError.classList.toggle('.notFoundError-display')
     } else {
         renderProducts(filteredProducts)
     }
