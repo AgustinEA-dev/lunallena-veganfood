@@ -12,6 +12,7 @@ const setError = (element, message) => {
     const errorDisplay = inputControl.querySelector('.error');
 
     errorDisplay.innerText = message;
+    errorDisplay.classList.remove('success')
     inputControl.classList.add('error');
     inputControl.classList.remove('success')
 }
@@ -54,6 +55,7 @@ const validateInputs = () => {
 
     if (usernameValue === '') {
         setError(username, 'Este campo es obligatorio.');
+        // errorDisplay.classList.remove('success');
     } else {
         setSuccess(username, '¡Se bién!');
     }

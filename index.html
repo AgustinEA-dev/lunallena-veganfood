@@ -57,8 +57,8 @@
           <div class="empty-msg"></div>
           <hr>
           <h4 class="total"></h4>
-          <button class="buy-btn">Comprar</button>
-          <button class="empty-btn">Vaciar carrito</button>
+          <button class="buy-btn disabled">Comprar</button>
+          <button class="empty-btn disabled">Vaciar carrito</button>
         </div>
 
         <div class="overlay"></div>
@@ -83,11 +83,12 @@
       <h1>Productos</h1>
       <div class="search-container">
         <input id="search" type="search" placeholder="Búsqueda">
+        <h3 class="notFoundError">No encontramos ese producto :( </h3>
       </div>
       <div class="products-container">
         <!-- Acá renderizamos los productos -->
       </div>
-      <h3 class="notFoundError">No encontramos ese producto 🤔</h3>
+
     </section>
 
     <div class="add-modal"></div>

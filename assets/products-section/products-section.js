@@ -48,11 +48,14 @@ const handleSearch = () => {
     const searchTerm = input.value.toLowerCase()
     const filteredProducts = productsData.filter((product) =>
         product.name.toLowerCase().startsWith(searchTerm))
-    if (!filteredProducts) {
-        // productsContainer.innerHTML = ""
-        notFoundError.classList.toggle('.notFoundError-display')
+    if (filteredProducts.length === 0) {
+        productsContainer.innerHTML = ""
+        notFoundError.classList.add('notFoundError-display')
+        productsContainer.classList.add('display-none')
     } else {
         renderProducts(filteredProducts)
+        notFoundError.classList.remove('notFoundError-display')
+        productsContainer.classList.remove('display-none')
     }
 
 }

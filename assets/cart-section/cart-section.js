@@ -221,7 +221,7 @@ const handleMinusBtnEvent = (id) => {
         showConfirmButton: false,
         // iconColor: "#00ff00",
         color: "#18282f",
-        timer: 2500,
+        timer: 1500,
         // width: "260px",
     }
 

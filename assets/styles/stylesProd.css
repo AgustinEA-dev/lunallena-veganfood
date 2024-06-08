@@ -49,6 +49,7 @@ h1 {
 }
 
 .products-container {
+    margin-bottom: 60px;
     padding-top: 40px;
     max-width: 900px;
     width: 100%;
@@ -57,6 +58,10 @@ h1 {
     align-items: center;
     flex-wrap: wrap;
     gap: 35px;
+}
+
+.display-none {
+    display: none;
 }
 
 .card-container {
@@ -108,7 +113,10 @@ label {
 }
 
 .notFoundError {
+    color: #a4a4a4;
+    padding: 50px;
     display: none;
+
 }
 
 .notFoundError-display {
