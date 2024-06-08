@@ -1,4 +1,5 @@
 // navbar
+
 const cartBtn = document.querySelector('#cart-icon')
 const navBar = document.querySelector('.nav')
 const dropDownMenu = document.querySelector('.dropDown')
@@ -6,23 +7,8 @@ const barsMenu = document.querySelector('#bars-icon')
 const cartContent = document.querySelector('.cart-content')
 const overlay = document.querySelector('.overlay')
 
-// Función para ocultar la barra de navegación on scroll
 
-
-// let lastScrollY = window.scrollY
-
-// const handleHideScroll = () => {
-//     if (lastScrollY < window.scrollY) {
-
-//         navBar.classList.add('nav--hidden')
-//     } else {
-
-//         navBar.classList.remove('nav--hidden')
-//     }
-// }
-
-
-// Función para el display del dropdown menú y ocultar el cart content.
+// Function to display bars-menu.
 
 
 const dropDown = () => {
@@ -31,7 +17,7 @@ const dropDown = () => {
     // overlay.classList.toggle("show-overlay");
 }
 
-// Función para cerrar el dropDownd cuando hacemos un click en algúno de sus links.
+// Función to close bars-menu when clicked.
 
 
 const closeOnClick = (e) => {
@@ -42,7 +28,7 @@ const closeOnClick = (e) => {
 }
 
 
-// Función para el display del cart-content y cerrar el dropDown
+// Function to display cart-content and overlay.
 
 
 const cartContentDisplay = () => {
@@ -53,7 +39,7 @@ const cartContentDisplay = () => {
 }
 
 
-// Función para cerrar onScroll
+// Function to close on scroll.
 
 
 const closeOnScroll = () => {
@@ -68,7 +54,7 @@ const closeOnScroll = () => {
 }
 
 
-// * Función para cerrar el menú hamburguesa o el carrito y ocultar el overlay cuando se hace click en el overlay
+// * Function to close bars-menu or cart when click on overlay
 // */
 
 
@@ -79,7 +65,7 @@ const closeOnOverlayClick = () => {
 };
 
 
-// Función inicializadora de nav-section.
+// Function to init navbar section.
 
 
 export const navSectionInit = () => {
@@ -88,6 +74,5 @@ export const navSectionInit = () => {
     navBar.addEventListener('click', closeOnClick)
     cartBtn.addEventListener('click', cartContentDisplay)
     window.addEventListener('scroll', closeOnScroll)
-    // window.addEventListener('scroll', handleHideScroll)
     overlay.addEventListener('click', closeOnOverlayClick)
 }

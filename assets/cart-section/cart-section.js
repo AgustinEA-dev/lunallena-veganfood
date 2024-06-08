@@ -1,4 +1,4 @@
-// Dependecias
+// Dependecies
 
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
@@ -23,7 +23,7 @@ const total = document.querySelector('.total')
 const successModal = document.querySelector(".add-modal");
 
 
-// Función para guardar en el carrito.
+// Function to store in cart.
 
 
 const saveCart = () => {
@@ -31,7 +31,7 @@ const saveCart = () => {
 }
 
 
-// Creación de template para productos del carrito
+// Function to create product template.
 
 
 const createCartProductTemplate = (cartProduct) => {
@@ -55,7 +55,7 @@ const createCartProductTemplate = (cartProduct) => {
 }
 
 
-// Función para renderizar los productos en el carrito, en el caso de que el carrito esté vacío mostrar un mensaje que lo indique.
+// Function to render cart products. If cart is empty render a message to show so.
 
 
 const renderCart = () => {
@@ -69,7 +69,7 @@ const renderCart = () => {
 }
 
 
-// Función para obtener el total de la compra
+// Function to get buy total.
 
 
 const getCartTotal = () => {
@@ -77,7 +77,7 @@ const getCartTotal = () => {
 };
 
 
-// Función para mostrar el total de la compra0
+// Function to show but total.
 
 
 const showCartTotal = () => {
@@ -85,7 +85,7 @@ const showCartTotal = () => {
 };
 
 
-// Función para desabilitar botones
+// Function to unable buttons.
 
 
 const disableBtn = (btn) => {
@@ -97,7 +97,7 @@ const disableBtn = (btn) => {
 }
 
 
-//  Función para actualizar la burbuja de cantidad con el número de productos en el carrito
+//  Function to update cart bubble.
 
 
 const renderCartBubble = () => {
@@ -105,7 +105,7 @@ const renderCartBubble = () => {
 };
 
 
-// Función que ejecuta las funciones necesarias para actualizar el estado del carrito. 
+// Function to update cart state.
 
 
 const updateCartState = () => {
@@ -201,42 +201,42 @@ const handleMinusBtnEvent = (id) => {
 
     const existingCartProduct = cart.find((item) => item.id == id)
 
+    const confirm = {
+        title: '¿Desea eliminar este producto?',
+        icon: 'question',
+        // iconColor: "#18282f",
+        confirmButtonText: 'Aceptar',
+        showCancelButton: true,
+        cancelButtonColor: "#d33",
+        color: "#18282f",
+        allowOutsideClick: false,
+        allowEscapeKey: true
+        // width: "260px",
+    }
+
+    const exito = {
+        title: '¡Perfecto!',
+        text: 'Producto eliminado.',
+        icon: 'success',
+        showConfirmButton: false,
+        // iconColor: "#00ff00",
+        color: "#18282f",
+        timer: 2500,
+        // width: "260px",
+    }
+
     if (existingCartProduct.quantity === 1) {
         console.log(existingCartProduct)
-        const confirm = {
-            title: '¿Desea eliminar este producto?',
-            icon: 'question',
-            // iconColor: "#18282f",
-            confirmButtonText: 'Aceptar',
-            showCancelButton: true,
-            cancelButtonColor: "#d33",
-            color: "#18282f",
-            allowOutsideClick: false,
-            allowEscapeKey: true
-            // width: "260px",
-        }
-
-        const exito = {
-            title: '¡Perfecto!',
-            text: 'Producto eliminado.',
-            icon: 'success',
-            showConfirmButton: false,
-            // iconColor: "#00ff00",
-            color: "#18282f",
-            timer: 2500,
-            // width: "260px",
-        }
 
         Swal.fire(confirm)
             .then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire(exito)
                     removeProductFromCart(existingCartProduct);
-
                 }
-
             })
     }
+
     substractProductUnit(existingCartProduct);
 };
 
@@ -287,7 +287,7 @@ const resetCartItems = () => {
 //  Función para completar la compra.
 
 
-const completeCartActionBuy = (confirmMsg) => {
+const completeCartActionBuy = () => {
     if (!cart.length) return;
 
     const confirm = {
@@ -322,7 +322,7 @@ const completeCartActionBuy = (confirmMsg) => {
 //  Función para vaciar el carrito.
 
 
-const completeCartActionDelete = (confirmMsg) => {
+const completeCartActionDelete = () => {
     if (!cart.length) return;
 
     const confirm = {

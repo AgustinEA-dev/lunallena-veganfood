@@ -7,6 +7,7 @@ import { addProduct } from "../cart-section/cart-section.js"
 
 export const productsContainer = document.querySelector('.products-container')
 const input = document.querySelector('#search')
+export const notFoundError = document.querySelector('.notFoundError')
 
 
 // Function to create template for products.
@@ -18,15 +19,14 @@ const createProductTemplate = (product) => {
 <img class="cardImg" src="${img}" alt="${name}">
 <div class="infoProduct">
 <h2 class ="h2Prod">${name}</h2>
-<h3>Precio x unidad: $${precio}</h3>
-<h4>Cod: ${id}</h4>
+<h3>$${precio} x unidad</h3>
 </div>
 <button class="btn-add"
 data-id='${id}'
 data-name='${name}'
 data-img='${img}'
 data-precio='${precio}'
->Agregar</button>
+>Agregar al carrito</button>
 </div>`
 }
 
@@ -35,8 +35,7 @@ data-precio='${precio}'
 
 
 const renderProducts = (productList) => {
-    productsContainer.innerHTML = ""
-    productsContainer.innerHTML += productList
+    productsContainer.innerHTML = productList
         .map(createProductTemplate)
         .join("")
 }
@@ -49,7 +48,15 @@ const handleSearch = () => {
     const searchTerm = input.value.toLowerCase()
     const filteredProducts = productsData.filter((product) =>
         product.name.toLowerCase().startsWith(searchTerm))
-    renderProducts(filteredProducts)
+
+    // productsContainer.innerHTML = ""
+
+    if (!filteredProducts) {
+        notFoundError.classList.toggle('notFoundError-display')
+    } else {
+        renderProducts(filteredProducts)
+    }
+
 }
 
 
