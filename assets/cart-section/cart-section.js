@@ -200,17 +200,17 @@ const handlePlusBtnEvent = (id) => {
 
 const handleMinusBtnEvent = (id) => {
 
+    const existingCartProduct = cart.find((item) => item.id == id)
+
     const confirm = {
         title: '¿Desea eliminar este producto?',
         icon: 'question',
-        // iconColor: "#18282f",
         confirmButtonText: 'Aceptar',
         showCancelButton: true,
         cancelButtonColor: "#d33",
         color: "#18282f",
         allowOutsideClick: false,
         allowEscapeKey: true
-        // width: "260px",
     }
 
     const exito = {
@@ -218,13 +218,10 @@ const handleMinusBtnEvent = (id) => {
         text: 'Producto eliminado.',
         icon: 'success',
         showConfirmButton: false,
-        // iconColor: "#00ff00",
         color: "#18282f",
         timer: 1500,
-        // width: "260px",
     }
 
-    const existingCartProduct = cart.find((item) => item.id == id)
 
     if (existingCartProduct.quantity === 1) {
 
@@ -233,13 +230,13 @@ const handleMinusBtnEvent = (id) => {
                 if (result.isConfirmed) {
                     Swal.fire(exito)
                     removeProductFromCart(existingCartProduct);
-                    // renderCart()
                 }
-                updateCartState()
             })
+        updateCartState()
+        return
     }
-
     substractProductUnit(existingCartProduct);
+
 };
 
 
@@ -319,7 +316,7 @@ const completeCartActionBuy = () => {
         .then((result) => {
             if (result.isConfirmed) {
                 Swal.fire(exito)
-                cartProduct.innerHTML = ""
+                // cartProduct.innerHTML = ""
                 resetCartItems()
             }
         })
@@ -353,7 +350,7 @@ const completeCartActionDelete = () => {
         .then((result) => {
             if (result.isConfirmed) {
                 Swal.fire(exito)
-                cartProduct.innerHTML = ""
+                // cartProduct.innerHTML = ""
                 resetCartItems()
             }
         })

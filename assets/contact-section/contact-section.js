@@ -142,6 +142,7 @@ const validateForm = (e) => {
 
     if (isValidForm) {
         Swal.fire(exito);
+        form.reset()
     }
 
 }
