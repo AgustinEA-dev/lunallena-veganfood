@@ -57,20 +57,20 @@ h1 {
     border-color: #ff3860;
 }
 
-
-.input-control .error {
+.input-control.error small {
     color: #ff3860;
-    font-size: 9px;
-    height: 13px;
-    
 }
 
-.input-control .success {
+.input-control.success small {
     color: #09c372;
 }
 
+
 #text-area {
-    height: 100px;
+    min-height: 150px;
+    max-height: 150px;
+    min-width: 260px;
+    max-width: 260px;
     border: 2px solid #f0f0f0;
     border-radius: 4px;
     outline: none;
@@ -90,4 +90,8 @@ h1 {
 #username,
 #email {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.h2-contact {
+    font-size: 60px;
 }

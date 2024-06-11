@@ -160,6 +160,7 @@ const createCartProduct = (product) => {
 
 
 const isExistingCartProduct = (product) => {
+    // console.log(product)
     return cart.find((item) => item.id === product.id)
 }
 
@@ -199,8 +200,6 @@ const handlePlusBtnEvent = (id) => {
 
 const handleMinusBtnEvent = (id) => {
 
-    const existingCartProduct = cart.find((item) => item.id == id)
-
     const confirm = {
         title: '¿Desea eliminar este producto?',
         icon: 'question',
@@ -225,15 +224,18 @@ const handleMinusBtnEvent = (id) => {
         // width: "260px",
     }
 
+    const existingCartProduct = cart.find((item) => item.id == id)
+
     if (existingCartProduct.quantity === 1) {
-        console.log(existingCartProduct)
 
         Swal.fire(confirm)
             .then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire(exito)
                     removeProductFromCart(existingCartProduct);
+                    // renderCart()
                 }
+                updateCartState()
             })
     }
 
@@ -245,6 +247,7 @@ const handleMinusBtnEvent = (id) => {
 
 
 const substractProductUnit = (existingProduct) => {
+
     cart = cart.map((product) => {
         return product.id === existingProduct.id
             ? { ...product, quantity: Number(product.quantity) - 1 }
@@ -257,6 +260,7 @@ const substractProductUnit = (existingProduct) => {
 
 
 const removeProductFromCart = (existingProduct) => {
+
     cart = cart.filter((product) => product.id !== existingProduct.id);
     updateCartState();
 };
@@ -266,6 +270,7 @@ const removeProductFromCart = (existingProduct) => {
 
 
 const handleQuantity = (e) => {
+
     if (e.target.classList.contains("down")) {
         handleMinusBtnEvent(e.target.dataset.id);
     } else if (e.target.classList.contains("up")) {
@@ -279,6 +284,7 @@ const handleQuantity = (e) => {
 
 
 const resetCartItems = () => {
+
     cart = [];
     updateCartState();
 };
@@ -288,6 +294,7 @@ const resetCartItems = () => {
 
 
 const completeCartActionBuy = () => {
+
     if (!cart.length) return;
 
     const confirm = {
@@ -323,6 +330,7 @@ const completeCartActionBuy = () => {
 
 
 const completeCartActionDelete = () => {
+
     if (!cart.length) return;
 
     const confirm = {

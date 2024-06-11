@@ -16,11 +16,10 @@
     /* padding-top: 40px; */
 }
 
-h1 {
+.h2-products {
     font-family: "Anton", sans-serif;
-    font-weight: 400;
+    font-size: 60px;
     font-style: normal;
-    font-size: 50px;
     color: rgb(0, 0, 0);
     padding: 40px;
     /* margin: 40px 0 40px 0; */
@@ -94,7 +93,7 @@ h1 {
     background-color: #FFB930;
     border: none;
     color: #18282f;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     font-size: 16px;
     padding: 6px;
     width: 200px;

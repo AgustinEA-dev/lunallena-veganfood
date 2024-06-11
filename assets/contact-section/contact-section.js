@@ -1,87 +1,157 @@
+import Swal from "sweetalert2/dist/sweetalert2";
+import 'sweetalert2/src/sweetalert2.scss'
+
+
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email')
 const textArea = document.getElementById('text-area')
 
 
-// Function to set error
+// Función que chequea si un campo está vacio
 
 
-const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = message;
-    errorDisplay.classList.remove('success')
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success')
-}
+const isEmpty = (input) => {  // false no esta vacio | true, esta vacio
+    return !input.value.trim().length;
+};
 
 
-// Function to set success
+const isBetween = (input, min, max) => {
+    return input.value.length >= min && input.value.length < max;
+};
 
 
-const setSuccess = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
+//Función para validar  el mail con expresiones regulares
 
-    errorDisplay.innerText = message;
-    errorDisplay.classList.add('success')
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
+
+const isEmailValid = (input) => {
+    const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+    //testeamos
+    return re.test(input.value.trim());
+};
+
+
+// Función para mostrar error al validar el input
+
+
+const showError = (input, message) => {
+    const formField = input.parentElement;
+    formField.classList.remove("success");
+    formField.classList.add("error");
+    const error = formField.querySelector("small");
+    error.style.display = "block";
+    error.textContent = message;
+
+
+};
+
+const showSuccess = (input, message) => {
+    const formField = input.parentElement;
+    formField.classList.remove("error");
+    formField.classList.add("success");
+    const error = formField.querySelector("small");
+    error.textContent = message;
 
 };
 
 
-// Function to create literal expression 
+// Funciones de validación de los inputs
 
+const checkTextInput = (input) => {
+    let valid = false;
+    const minCharacters = 3;
+    const maxCharacters = 25;
 
-const isValidEmail = email => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+    if (isEmpty(input)) {
+        showError(input, "Este campo es obligatorio")
+        return;
+    }
+    if (!isBetween(input, minCharacters, maxCharacters)) {
+        showError(input, `Este campo debe tener entre ${minCharacters} y ${maxCharacters} caracteres`);
+        return;
+    }
+
+    showSuccess(input, "¡Se ve bién!");
+    valid = true;
+    return valid;
 }
 
 
+const checkEmail = (input) => {
 
-
-
-// Function to validate inputs
-
-
-const validateInputs = () => {
-    const usernameValue = username.value.trim();
-    const emailValue = email.value.trim();
-    const textAreaValue = textArea.value.trim()
-
-    if (usernameValue === '') {
-        setError(username, 'Este campo es obligatorio.');
-        // errorDisplay.classList.remove('success');
-    } else {
-        setSuccess(username, '¡Se bién!');
+    let valid = false;
+    if (isEmpty(input)) {
+        showError(input, "Este campo es obligatorio")
+        return;
     }
 
-    if (emailValue === '') {
-        setError(email, 'Este campo es obligatorio.');
-    } else if (!isValidEmail(emailValue)) {
-        setError(email, 'Por favor ingresá un email válido.');
-    } else {
-        setSuccess(email, '¡Se ve bien!');
+    if (!isEmailValid(input)) {
+        showError(input, "El email no es válido");
+        return;
     }
 
-    if (textAreaValue === '') {
-        setError(textArea, 'Por favor, ingresá un mensaje.');
-    } else {
-        setSuccess(textArea, '¡Se ve bien!')
+    showSuccess(input, "¡Se ve bién!");
+    valid = true;
+    return valid;
+
+}
+
+const checkTextArea = (input) => {
+    let valid = false
+    const minCharacters = 60
+    const maxCharacters = 500
+
+
+    if (isEmpty(input)) {
+        showError(input, "Este campo es obligatorio")
+        return;
     }
-};
+    if (!isBetween(input, minCharacters, maxCharacters)) {
+        showError(input, `Este campo debe tener entre ${minCharacters} y ${maxCharacters} caracteres`);
+        return;
+    }
+
+    showSuccess(input, "¡Se ve bién!");
+    valid = true;
+    return valid;
 
 
-// Function to init constact section
+}
 
+// Validación general y almacenamiento de los datos
+
+
+const validateForm = (e) => {
+    e.preventDefault();
+
+    //Almacenamos en variables el estado de los inputs
+
+    let isNameValid = checkTextInput(username);
+    let isEmailValid = checkEmail(email);
+    let isTextAreaValid = checkTextArea(textArea)
+    let isValidForm = isNameValid && isEmailValid && isTextAreaValid
+
+    const exito = {
+        title: '¡Mensaje envíado!',
+        text: 'Te responderemos a la brevedad',
+        icon: 'success',
+        showConfirmButton: false,
+        color: "#18282f",
+        timer: 2500,
+    }
+
+    if (isValidForm) {
+        Swal.fire(exito);
+    }
+
+}
+
+// Funcion inicializadora
 
 export const contactSectionInit = () => {
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        validateInputs();
-    });
-}
+    form.addEventListener("submit", validateForm);
+    // validar por evento input cada campo
+    username.addEventListener("input", () => checkTextInput(username));
+    email.addEventListener("input", () => checkEmail(email));
+    textArea.addEventListener("input", () => checkTextArea(textArea))
+};

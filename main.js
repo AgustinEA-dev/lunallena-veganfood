@@ -28,6 +28,7 @@ const init = () => {
     cartSectionInit()
     contactSectionInit()
 }
+
 init()
 
 
