@@ -64,7 +64,6 @@ const renderCart = () => {
         `
         return
     }
-    emptyMsg.innerHTML = ""
     cartProduct.innerHTML = cart.map(createCartProductTemplate).join("");
 }
 
@@ -229,15 +228,13 @@ const handleMinusBtnEvent = (id) => {
             .then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire(exito)
-                    updateCartState()
                     removeProductFromCart(existingCartProduct);
-
-
                 }
             })
         return
     }
     substractProductUnit(existingCartProduct);
+
 
 };
 
@@ -286,6 +283,7 @@ const resetCartItems = () => {
 
     cart = [];
     updateCartState();
+
 };
 
 
@@ -376,11 +374,11 @@ const deleteCart = () => {
 
 
 export const cartSectionInit = () => {
-    document.addEventListener("DOMContentLoaded", renderCart);
-    document.addEventListener("DOMContentLoaded", showCartTotal);
     cartContent.addEventListener('click', handleQuantity)
     buyBtn.addEventListener("click", completeBuy);
     emptyBtn.addEventListener("click", deleteCart);
     renderCartBubble(cart)
+    document.addEventListener("DOMContentLoaded", renderCart);
+    document.addEventListener("DOMContentLoaded", showCartTotal);
 }
 

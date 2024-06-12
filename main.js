@@ -24,8 +24,8 @@ import { contactSectionInit } from './assets/contact-section/contact-section.js'
 
 const init = () => {
     productsSectionInit()
-    navSectionInit()
     cartSectionInit()
+    navSectionInit()
     contactSectionInit()
 }
 
