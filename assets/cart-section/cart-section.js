@@ -229,10 +229,12 @@ const handleMinusBtnEvent = (id) => {
             .then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire(exito)
+                    updateCartState()
                     removeProductFromCart(existingCartProduct);
+
+
                 }
             })
-        updateCartState()
         return
     }
     substractProductUnit(existingCartProduct);
