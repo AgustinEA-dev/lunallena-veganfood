@@ -64,6 +64,7 @@ const renderCart = () => {
         `
         return
     }
+    emptyMsg.innerHTML = ""
     cartProduct.innerHTML = cart.map(createCartProductTemplate).join("");
 }
 
@@ -229,13 +230,14 @@ const handleMinusBtnEvent = (id) => {
                 if (result.isConfirmed) {
                     Swal.fire(exito)
                     removeProductFromCart(existingCartProduct);
+                    if (cart.length === 0) {
+                        cartProduct.innerHTML = ""
+                    }
                 }
             })
         return
     }
     substractProductUnit(existingCartProduct);
-
-
 };
 
 
@@ -282,6 +284,7 @@ const handleQuantity = (e) => {
 const resetCartItems = () => {
 
     cart = [];
+    cartProduct.innerHTML = ""
     updateCartState();
 
 };
@@ -316,7 +319,6 @@ const completeCartActionBuy = () => {
         .then((result) => {
             if (result.isConfirmed) {
                 Swal.fire(exito)
-                // cartProduct.innerHTML = ""
                 resetCartItems()
             }
         })
@@ -350,7 +352,6 @@ const completeCartActionDelete = () => {
         .then((result) => {
             if (result.isConfirmed) {
                 Swal.fire(exito)
-                // cartProduct.innerHTML = ""
                 resetCartItems()
             }
         })
