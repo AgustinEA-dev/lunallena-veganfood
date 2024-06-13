@@ -1,4 +1,4 @@
-// navbar
+// Navbar
 
 const cartBtn = document.querySelector('#cart-icon')
 const navBar = document.querySelector('.nav')
@@ -8,7 +8,7 @@ const cartContent = document.querySelector('.cart-content')
 const overlay = document.querySelector('.overlay')
 
 
-// Function to display bars-menu.
+// Display bars-menu.
 
 
 const dropDown = () => {
@@ -17,7 +17,7 @@ const dropDown = () => {
     // overlay.classList.toggle("show-overlay");
 }
 
-// Función to close bars-menu when clicked.
+// Close bars-menu when clicked.
 
 
 const closeOnClick = (e) => {
@@ -28,7 +28,7 @@ const closeOnClick = (e) => {
 }
 
 
-// Function to display cart-content and overlay.
+// Display cart-content and overlay.
 
 
 const cartContentDisplay = () => {
@@ -39,7 +39,7 @@ const cartContentDisplay = () => {
 }
 
 
-// Function to close on scroll.
+// Close on scroll.
 
 
 const closeOnScroll = () => {
@@ -54,8 +54,7 @@ const closeOnScroll = () => {
 }
 
 
-// * Function to close bars-menu or cart when click on overlay
-// */
+// Close bars-menu or cart when click on overlay
 
 
 const closeOnOverlayClick = () => {
@@ -65,7 +64,7 @@ const closeOnOverlayClick = () => {
 };
 
 
-// Function to init navbar section.
+// Init navbar section.
 
 
 export const navSectionInit = () => {

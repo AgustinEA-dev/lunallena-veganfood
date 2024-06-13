@@ -23,15 +23,15 @@ const total = document.querySelector('.total')
 const successModal = document.querySelector(".add-modal");
 
 
-// Function to store in cart.
+// Store in cart.
 
 
 const saveCart = () => {
-    localStorage.setItem("cart", JSON.stringify(cart))
+    localStorage.setItem('cart', JSON.stringify(cart))
 }
 
 
-// Function to create product template.
+// Create product template.
 
 
 const createCartProductTemplate = (cartProduct) => {
@@ -55,7 +55,7 @@ const createCartProductTemplate = (cartProduct) => {
 }
 
 
-// Function to render cart products. If cart is empty render a message to show so.
+// Render cart products. If cart is empty render a message to show so.
 
 
 const renderCart = () => {
@@ -69,7 +69,7 @@ const renderCart = () => {
 }
 
 
-// Function to get buy total.
+// Get buy total.
 
 
 const getCartTotal = () => {
@@ -77,7 +77,7 @@ const getCartTotal = () => {
 };
 
 
-// Function to show but total.
+// Show buy total.
 
 
 const showCartTotal = () => {
@@ -85,7 +85,7 @@ const showCartTotal = () => {
 };
 
 
-// Function to unable buttons.
+// Unable buttons.
 
 
 const disableBtn = (btn) => {
@@ -97,7 +97,7 @@ const disableBtn = (btn) => {
 }
 
 
-//  Function to update cart bubble.
+// Update cart bubble.
 
 
 const renderCartBubble = () => {
@@ -105,7 +105,7 @@ const renderCartBubble = () => {
 };
 
 
-// Function to update cart state.
+// Update cart state.
 
 
 const updateCartState = () => {
@@ -118,7 +118,7 @@ const updateCartState = () => {
 };
 
 
-// Función para crear un objeto con la información del producto que se quiere agregar al carrito o bien agregar una unidad a un producto que ya este en el carrito.
+// Add to cart.
 
 
 export const addProduct = (e) => {
@@ -130,13 +130,13 @@ export const addProduct = (e) => {
         showSuccessModal("¡Se agregó una unidad más! También podés seguir agregando desde el carrito");
     } else {
         createCartProduct(product)
-        showSuccessModal("El producto se agregó correctamente");
+        showSuccessModal('El producto se agregó correctamente');
     }
     updateCartState()
 }
 
 
-//  * Función para agregar una unidad a un producto que ya este en el carrito.
+// Add one unit.
 
 
 const addUnitToProduct = (product) => {
@@ -148,7 +148,7 @@ const addUnitToProduct = (product) => {
 };
 
 
-//  * Función para crear un objeto con la información del producto que se quiere agregar al carrito.
+// Spread cart info and modify quantity.
 
 
 const createCartProduct = (product) => {
@@ -156,16 +156,16 @@ const createCartProduct = (product) => {
 }
 
 
-// Función para saber si un producto ya existe en el carrito.
+// Check for an existing product.
 
 
 const isExistingCartProduct = (product) => {
-    // console.log(product)
+
     return cart.find((item) => item.id === product.id)
 }
 
 
-// Función para crear un objeto con la información del producto que se quiere crear en el carrito.
+// Create an object with product information.
 
 
 const createProductData = (product) => {
@@ -174,19 +174,19 @@ const createProductData = (product) => {
 }
 
 
-// Función para mostrar el modal de éxito al agregar o añadir un producto.
+// Show success modal.
 
 
 const showSuccessModal = (msg) => {
-    successModal.classList.add("active-modal");
+    successModal.classList.add('active-modal');
     successModal.textContent = msg;
     setTimeout(() => {
-        successModal.classList.remove("active-modal")
+        successModal.classList.remove('active-modal')
     }, 2300)
 };
 
 
-// Función para manejar el evento click del botón de más de cada producto del carrito.
+// Handle plus button event.
 
 
 const handlePlusBtnEvent = (id) => {
@@ -195,7 +195,7 @@ const handlePlusBtnEvent = (id) => {
 };
 
 
-//  Función para manejar el evento click del botón de menos de cada producto del carrito.
+// Handle minus event.
 
 
 const handleMinusBtnEvent = (id) => {
@@ -208,7 +208,7 @@ const handleMinusBtnEvent = (id) => {
         confirmButtonText: 'Aceptar',
         showCancelButton: true,
         cancelButtonColor: "#d33",
-        color: "#18282f",
+        color: '#18282f',
         allowOutsideClick: false,
         allowEscapeKey: true
     }
@@ -218,7 +218,7 @@ const handleMinusBtnEvent = (id) => {
         text: 'Producto eliminado.',
         icon: 'success',
         showConfirmButton: false,
-        color: "#18282f",
+        color: '#18282f',
         timer: 1500,
     }
 
@@ -241,7 +241,7 @@ const handleMinusBtnEvent = (id) => {
 };
 
 
-//  Función para quitar una unidad de producto.
+// Substract a unit.
 
 
 const substractProductUnit = (existingProduct) => {
@@ -254,7 +254,7 @@ const substractProductUnit = (existingProduct) => {
 };
 
 
-//   Función para eliminar un producto del carrito.
+// Delete one product from cart.
 
 
 const removeProductFromCart = (existingProduct) => {
@@ -264,21 +264,21 @@ const removeProductFromCart = (existingProduct) => {
 };
 
 
-//  Función que maneja los eventos de apretar el botón de más o de menos según corresponda.
+// Handle quantity.
 
 
 const handleQuantity = (e) => {
 
-    if (e.target.classList.contains("down")) {
+    if (e.target.classList.contains('down')) {
         handleMinusBtnEvent(e.target.dataset.id);
-    } else if (e.target.classList.contains("up")) {
+    } else if (e.target.classList.contains('up')) {
         handlePlusBtnEvent(e.target.dataset.id);
     }
     updateCartState();
 }
 
 
-//  Función para vaciar el carrito.
+// Reset cart items.
 
 
 const resetCartItems = () => {
@@ -290,7 +290,7 @@ const resetCartItems = () => {
 };
 
 
-//  Función para completar la compra.
+// Complete buy.
 
 
 const completeCartActionBuy = () => {
@@ -325,7 +325,7 @@ const completeCartActionBuy = () => {
 };
 
 
-//  Función para vaciar el carrito.
+// Empty cart.
 
 
 const completeCartActionDelete = () => {
@@ -337,7 +337,7 @@ const completeCartActionDelete = () => {
         icon: 'question',
         confirmButtonText: 'Aceptar',
         showCancelButton: true,
-        cancelButtonColor: "#d33",
+        cancelButtonColor: '#d33',
         allowOutsideClick: false
     }
 
@@ -358,7 +358,7 @@ const completeCartActionDelete = () => {
 };
 
 
-//  Función para disparar el mensaje de compra exitosa y su posterior mensaje de exito en caso de darse la confirmación.
+// Fire succes message on buy or empty cart.
 
 
 const completeBuy = () => {
@@ -371,15 +371,15 @@ const deleteCart = () => {
 }
 
 
-// Función para inicializar cart-section
+// Init cart section.
 
 
 export const cartSectionInit = () => {
     cartContent.addEventListener('click', handleQuantity)
-    buyBtn.addEventListener("click", completeBuy);
-    emptyBtn.addEventListener("click", deleteCart);
+    buyBtn.addEventListener('click', completeBuy);
+    emptyBtn.addEventListener('click', deleteCart);
     renderCartBubble(cart)
-    document.addEventListener("DOMContentLoaded", renderCart);
-    document.addEventListener("DOMContentLoaded", showCartTotal);
+    document.addEventListener('DOMContentLoaded', renderCart);
+    document.addEventListener('DOMContentLoaded', showCartTotal);
 }
 

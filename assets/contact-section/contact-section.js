@@ -8,7 +8,7 @@ const email = document.getElementById('email')
 const textArea = document.getElementById('text-area')
 
 
-// Función que chequea si un campo está vacio
+// Empty field validation.
 
 
 const isEmpty = (input) => {  // false no esta vacio | true, esta vacio
@@ -21,7 +21,7 @@ const isBetween = (input, min, max) => {
 };
 
 
-//Función para validar  el mail con expresiones regulares
+//Email validation.
 
 
 const isEmailValid = (input) => {
@@ -31,7 +31,7 @@ const isEmailValid = (input) => {
 };
 
 
-// Función para mostrar error al validar el input
+// Error and success logic.
 
 
 const showError = (input, message) => {
@@ -55,7 +55,7 @@ const showSuccess = (input, message) => {
 };
 
 
-// Funciones de validación de los inputs
+// Input validators
 
 const checkTextInput = (input) => {
     let valid = false;
@@ -118,13 +118,11 @@ const checkTextArea = (input) => {
 
 }
 
-// Validación general y almacenamiento de los datos
+// General validation en data store.
 
 
 const validateForm = (e) => {
     e.preventDefault();
-
-    //Almacenamos en variables el estado de los inputs
 
     let isNameValid = checkTextInput(username);
     let isEmailValid = checkEmail(email);
@@ -147,11 +145,10 @@ const validateForm = (e) => {
 
 }
 
-// Funcion inicializadora
+// Contact section init
 
 export const contactSectionInit = () => {
     form.addEventListener("submit", validateForm);
-    // validar por evento input cada campo
     username.addEventListener("input", () => checkTextInput(username));
     email.addEventListener("input", () => checkEmail(email));
     textArea.addEventListener("input", () => checkTextArea(textArea))

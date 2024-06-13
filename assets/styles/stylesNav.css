@@ -1,6 +1,4 @@
 * {
-    margin: 0;
-    padding: 0;
     font-family: "Anton", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -130,28 +128,24 @@
 
 .items {
     list-style: none;
-    /* font-family: "Freeman", sans-serif; */
     font-weight: 400;
     font-style: normal;
 }
 
-a {
+li a {
     text-decoration: none;
     font-size: 18px;
     color: rgb(255, 255, 255);
+    padding: 5px;
+    transition: all ease-in-out 0.1s;
 }
 
 #info {
     color: #FFB930;
 }
 
-/* span {
-    font-size: 30px;
-} */
-
 img {
     width: 20px;
-    /* padding-right: 20px; */
 }
 
 #logo {

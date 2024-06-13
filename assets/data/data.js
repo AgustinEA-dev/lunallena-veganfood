@@ -71,12 +71,11 @@ export const productsData = [
     },
 ]
 
-// Función que crea la lista de productos
+// Function to create product list.
 
 const createProductList = () => {
     let productList = []
     productList.push(productsData)
-    // console.log(productList)
     return productList
 
 }

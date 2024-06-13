@@ -1,4 +1,4 @@
-// Estilos
+// Import styles.
 
 import './assets/styles/stylesCart.css'
 import './assets/styles/stylesFooter.css'
@@ -12,7 +12,7 @@ import './assets/styles/mediaquery.css'
 import './assets/styles/stylesContact.css'
 import 'animate.css'
 
-// Funciones 
+//Import modules.
 
 import { productsSectionInit } from './assets/products-section/products-section.js'
 import { navSectionInit } from './assets/nav-section/nav-section.js'
@@ -20,7 +20,7 @@ import { cartSectionInit } from './assets/cart-section/cart-section.js'
 import { contactSectionInit } from './assets/contact-section/contact-section.js'
 
 
-// Función incializadora main
+// Main init.
 
 const init = () => {
     productsSectionInit()
