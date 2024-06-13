@@ -49,7 +49,7 @@ h1 {
 }
 
 .input-control.success input {
-    border-color: #569fd6;
+    border-color: #30bd55;
 }
 
 .input-control.error input {
@@ -58,10 +58,13 @@ h1 {
 
 .input-control.error small {
     color: #ff3860;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 5px 0 5px 0;
 }
 
 .input-control.success small {
-    color: #569fd6;
+    color: #30bd55;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     padding: 5px 0 5px 0;
@@ -82,7 +85,7 @@ h1 {
 }
 
 .input-control.success #text-area {
-    border-color: #569fd6;
+    border-color: #30bd55;
 }
 
 .input-control.error #text-area {

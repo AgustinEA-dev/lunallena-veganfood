@@ -14,7 +14,6 @@ const overlay = document.querySelector('.overlay')
 const dropDown = () => {
     dropDownMenu.classList.toggle('dropDown-display')
     cartContent.classList.remove('cart-content-display')
-    // overlay.classList.toggle("show-overlay");
 }
 
 // Close bars-menu when clicked.

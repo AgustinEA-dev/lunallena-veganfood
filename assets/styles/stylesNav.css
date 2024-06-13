@@ -35,10 +35,8 @@
     padding: 25px;
     gap: 25px;
     width: 100px;
-    background-color: #18282f;
-    box-shadow: 1px 19px 23px -8px rgba(0, 0, 0, 0.50);
-    -webkit-box-shadow: 1px 19px 23px -8px rgba(0, 0, 0, 0.37);
-    -moz-box-shadow: 1px 19px 23px -8px rgba(0, 0, 0, 0.37);
+    background: rgb(24, 40, 47);
+    background: linear-gradient(266deg, rgba(24, 40, 47, 1) 7%, rgba(42, 40, 21, 1) 28%, rgba(19, 32, 37, 1) 71%);
     position: absolute;
     left: 0;
     top: 123px;

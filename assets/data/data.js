@@ -4,7 +4,7 @@ export const productsData = [
         precio: 600,
         // precioDocena: 5500,
         // precioMediaDocena: 2750,
-        img: './productos/medallones-calabaza.png',
+        img: './productos/medallon_calabaza.png',
         id: 1
     },
     {
@@ -12,31 +12,31 @@ export const productsData = [
         precio: 600,
         // precioDocena: 5500,
         // precioMediaDocena: 2750,
-        img: './productos/medallones-mixVegetales.png',
+        img: './productos/medallon_acelga.png',
         id: 2
-    },
-    {
-        name: 'Medallón de remolacha',
-        precio: 600,
-        // precioDocena: 5500,
-        // precioMediaDocena: 2750,
-        img: './productos/medallones-remolacha.png',
-        id: 3
     },
     {
         name: 'Medallón de arbejas',
         precio: 600,
         // precioDocena: 5500,
         // precioMediaDocena: 2750,
-        img: './productos/medallones-arbejas.png',
+        img: './productos/medallon_arbejas.png',
         id: 4
+    },
+    {
+        name: 'Medallón de remolacha',
+        precio: 600,
+        // precioDocena: 5500,
+        // precioMediaDocena: 2750,
+        img: './productos/medallon_remolacha.png',
+        id: 3
     },
     {
         name: 'Medallón variedades',
         precio: 600,
         // precioDocena: 5500,
         // precioMediaDocena: 2750,
-        img: './productos/medallones-variedades.png',
+        img: './productos/medallones_mix.png',
         id: 5
     },
     {

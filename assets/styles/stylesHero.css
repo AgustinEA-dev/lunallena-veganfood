@@ -11,3 +11,8 @@
     background-attachment: fixed;
     height: 700px;
 }
+
+h1 {
+position: relative;
+z-index: 0;
+}
