@@ -62,7 +62,7 @@
 .search-container {
     background-image: url("../../public/productos/background-vegetables.jpg");
     width: 100%;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 .card-container {
@@ -91,7 +91,7 @@
     cursor: pointer;
     background-color: #FFB930;
     border: none;
-    color: #263941;
+    color: #18282f;
     font-family: "Mouse Memoirs", sans-serif;
     font-size: 23px;
     padding: 6px;
@@ -100,10 +100,12 @@
 
 .infoProduct {
     width: 155px;
+    color: #263941;
 }
 
 .h2Prod {
     font-size: 15px;
+    color: #263941;
 }
 
 label {
