@@ -63,6 +63,7 @@
     background-image: url("../../public/productos/background-vegetables.jpg");
     width: 100%;
     padding-bottom: 50px;
+    border-bottom: 5px solid #c3cfd4 ;
 }
 
 .card-container {
@@ -94,8 +95,8 @@
     color: #18282f;
     font-family: "Mouse Memoirs", sans-serif;
     font-size: 23px;
-    padding: 6px;
-    width: 200px;
+    padding: 9px;
+ 
 }
 
 .infoProduct {

@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    border-top: 5px solid #c3cfd4 ;
     /* background-color: #ffffff; */
     background-image: url("../../public/productos/background-vegetables.jpg");
     padding-bottom: 30px;
@@ -105,3 +106,4 @@ h1 {
     font-size: 60px;
     text-decoration: underline;
 }
+
