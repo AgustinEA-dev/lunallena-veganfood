@@ -45,5 +45,10 @@
 
     .infoProduct {
         width: 225px;
+
+    }
+
+    #info p {
+        font-size: 35px;
     }
 }
