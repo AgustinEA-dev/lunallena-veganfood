@@ -51,4 +51,8 @@
     #info p {
         font-size: 35px;
     }
+
+    .search-container{
+        padding-bottom: 80px;
+    }
 }
