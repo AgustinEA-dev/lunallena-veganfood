@@ -6,12 +6,12 @@
 
 
 #products {
-    margin-top: 30px;
+    /* margin-top: 30px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: rgb(255, 255, 255);
+    /* background-image: url('../../public/productos/background-vegetables.jpg'); */
     gap: 20px;
 }
 
@@ -19,6 +19,7 @@
     font-family: "Anton", sans-serif;
     font-size: 60px;
     font-style: normal;
+    padding-top: 30px;
     color: rgb(0, 0, 0);
 }
 
@@ -49,6 +50,9 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 35px;
+    background-color: white;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
 }
 
 .display-none {
@@ -82,8 +86,8 @@
     background-color: #FFB930;
     border: none;
     color: #18282f;
-    /* border-radius: 10px; */
-    font-size: 16px;
+    font-family: "Mouse Memoirs", sans-serif;
+    font-size: 23px;
     padding: 6px;
     width: 200px;
 }

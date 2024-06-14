@@ -3,6 +3,8 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    background-color: #ffffff;
+    margin-bottom: 40px;
 }
 
 #form {
