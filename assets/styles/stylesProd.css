@@ -20,7 +20,7 @@
     font-size: 60px;
     font-style: normal;
     padding-top: 30px;
-    color: rgb(0, 0, 0);
+    color: #263941;
 }
 
 #products input {
@@ -59,6 +59,12 @@
     display: none;
 }
 
+.search-container {
+    background-image: url("../../public/productos/background-vegetables.jpg");
+    width: 100%;
+    padding-bottom: 30px;
+}
+
 .card-container {
     display: flex;
     flex-direction: column;
@@ -85,7 +91,7 @@
     cursor: pointer;
     background-color: #FFB930;
     border: none;
-    color: #18282f;
+    color: #263941;
     font-family: "Mouse Memoirs", sans-serif;
     font-size: 23px;
     padding: 6px;

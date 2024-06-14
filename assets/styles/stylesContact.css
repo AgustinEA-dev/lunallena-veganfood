@@ -3,8 +3,10 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    background-color: #ffffff;
-    margin-bottom: 40px;
+    /* background-color: #ffffff; */
+    background-image: url("../../public/productos/background-vegetables.jpg");
+    padding-bottom: 30px;
+    color: #263941;
 }
 
 #form {
@@ -60,14 +62,14 @@ h1 {
 
 .input-control.error small {
     color: #ff3860;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     padding: 5px 0 5px 0;
 }
 
 .input-control.success small {
     color: #30bd55;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     padding: 5px 0 5px 0;
 }
