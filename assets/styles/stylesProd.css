@@ -51,7 +51,7 @@
     flex-wrap: wrap;
     gap: 35px;
     background-color: white;
-    border: 2px solid #ffffff;
+    /* border: 2px solid #ffffff; */
     border-radius: 20px;
 }
 
@@ -60,10 +60,10 @@
 }
 
 .search-container {
-    background-image: url("../../public/productos/background-vegetables.jpg");
+    /* background-image: url("../../public/productos/background-vegetables.jpg"); */
     width: 100%;
     padding-bottom: 50px;
-    border-bottom: 5px solid #c3cfd4 ;
+    /* border-bottom: 5px solid #c3cfd4 ; */
 }
 
 .card-container {
