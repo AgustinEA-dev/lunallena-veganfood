@@ -5,8 +5,8 @@
 }
 
 .bg-img {
-    background-image: url("../../public/productos/portada.jpg");
-    background-size: 1200px;
+    background-image: url("../productos/IMG_1435.jpg");
+    background-size: 1070px;
     background-position: center;
     background-attachment: fixed;
     height: 900px;
