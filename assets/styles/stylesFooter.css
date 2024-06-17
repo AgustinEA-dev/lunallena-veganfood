@@ -10,12 +10,15 @@ footer {
 }
 
 footer h2 {
-    padding-left: 50px;
     font-size: 50px;
     text-align: center;
     color: #FFB930;
-    opacity: 0.1;
     font-family: "Mouse Memoirs", sans-serif;
+    opacity: 0.1;
+}
+
+.left-h2 {
+    padding-left: 50px;
 }
 
 .right-h2 {
@@ -23,7 +26,24 @@ footer h2 {
     padding-right: 50px;
 }
 
-footer img {
-    width: 300px;
+.link-ig img {
+    width: 40px;
+    opacity: 1;
+}
+
+.footer-navigation {
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+    gap: 15px;
+    border-left: 2px solid#ffd952;
+    padding-left: 10px;
+}
+
+.footer-items {
+    list-style: none;
+}
+
+.footer-link {
     opacity: 0.1;
 }

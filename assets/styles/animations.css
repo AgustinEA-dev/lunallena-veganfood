@@ -21,6 +21,6 @@ html {
   display: block;
 }
 
-li a:hover {
+.nav-link:hover {
   border-bottom: 3px solid #FFB930;
 }
