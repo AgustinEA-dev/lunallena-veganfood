@@ -10,6 +10,7 @@ import './assets/styles/stylesProd.css'
 import './assets/styles/animations.css'
 import './assets/styles/mediaquery.css'
 import './assets/styles/stylesContact.css'
+import './assets/styles/wspIconStyles.css'
 import 'animate.css'
 
 //Import modules.
