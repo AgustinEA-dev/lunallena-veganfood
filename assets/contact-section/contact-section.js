@@ -54,6 +54,13 @@ const showSuccess = (input, message) => {
 
 };
 
+// const resetForm = (input) => {
+//     const formField = input.parentElement
+//     formField.classList.remove('success')
+//     const error = formField.querySelector("small")
+//     error.textContent = ("")
+// }
+
 
 // Input validators
 
@@ -141,6 +148,10 @@ const validateForm = (e) => {
     if (isValidForm) {
         Swal.fire(exito);
         form.reset()
+        // setTimeout(() => {
+        //     window.location.reload();
+        // }, 2500);
+
     }
 
 }
