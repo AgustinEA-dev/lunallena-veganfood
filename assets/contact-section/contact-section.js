@@ -54,13 +54,6 @@ const showSuccess = (input, message) => {
 
 };
 
-// const resetForm = (input) => {
-//     const formField = input.parentElement
-//     formField.classList.remove('success')
-//     const error = formField.querySelector("small")
-//     error.textContent = ("")
-// }
-
 
 // Input validators
 
@@ -136,21 +129,36 @@ const validateForm = (e) => {
     let isTextAreaValid = checkTextArea(textArea)
     let isValidForm = isNameValid && isEmailValid && isTextAreaValid
 
+    const confirm = {
+        title: '¿Desea enviar este mensaje?',
+        icon: 'question',
+        confirmButtonText: 'Aceptar',
+        showCancelButton: true,
+        cancelButtonColor: "#d33",
+        color: '#18282f',
+        allowOutsideClick: false,
+        allowEscapeKey: true
+    }
+
     const exito = {
-        title: '¡Mensaje envíado!',
-        text: 'Te responderemos a la brevedad',
+        title: '¡Perfecto!',
+        text: 'El mensaje a sido envíado',
         icon: 'success',
         showConfirmButton: false,
-        color: "#18282f",
-        timer: 2500,
+        color: '#18282f',
+        timer: 1500,
     }
 
     if (isValidForm) {
-        Swal.fire(exito);
-        form.reset()
-        // setTimeout(() => {
-        //     window.location.reload();
-        // }, 2500);
+        Swal.fire(confirm)
+            .then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(exito)
+                        .then(() => {
+                            window.location.href = "index.html"
+                        })
+                }
+            })
 
     }
 
