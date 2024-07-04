@@ -43,7 +43,7 @@
 }
 
 .input-control input:focus {
-    outline: 0;
+    outline: none;
 }
 
 .input-control.success input {

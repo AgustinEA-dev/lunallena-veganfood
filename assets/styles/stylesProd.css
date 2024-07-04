@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 #products {
     display: flex;
     flex-direction: column;
@@ -91,6 +90,10 @@
     font-size: 23px;
     padding: 9px;
 
+}
+
+.btn-add:hover {
+    background-color: #ffd952;
 }
 
 .infoProduct {

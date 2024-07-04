@@ -3,6 +3,23 @@ html {
   scroll-padding-top: 122px;
 }
 
+@keyframes fade-in {
+
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+
+}
+
+#hero{
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+
 .overlay {
   position: absolute;
   top: 123px;

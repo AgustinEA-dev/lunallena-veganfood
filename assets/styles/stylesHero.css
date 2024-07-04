@@ -10,9 +10,10 @@
     background-position: center;
     background-attachment: fixed;
     height: 900px;
+    margin-top: 123px;
 }
 
 h1 {
-position: relative;
-z-index: 0;
+    position: relative;
+    z-index: 0;
 }
