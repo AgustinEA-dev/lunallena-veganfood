@@ -1,3 +1,24 @@
+:root {
+
+    /* colors */
+
+    --h2-color: #263941;
+    --border-grey: #b0b6bb;
+    --background-white: #ffffff;
+    --font-color: #18282f;
+    --btn-color: #FFB930;
+    --btn-hover: #ffd952;
+    --notFound-color: #a4a4a4;
+
+    /* font-size */
+
+    --h2-fontsize: 60px;
+    --input-fontsize: 13px;
+    --btn-fontsize: 23px;
+    --h2prod-fontsize: 15px;
+
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -10,27 +31,26 @@
     align-items: center;
     text-align: center;
     gap: 20px;
-    background-color: #ffffff;
+    background-color: var(--background-white);
 }
 
 .h2-products {
     font-family: "Anton", sans-serif;
-    font-size: 60px;
+    font-size: var(--h2-fontsize);
     font-style: normal;
     padding: 30px;
-    color: #263941;
+    color: var(--h2-color);
 }
 
 #products input {
     width: 300px;
     padding: 16px;
     border-radius: 30px;
-    border: 2px solid #b0b6bb;
+    border: 2px solid var(--border-grey);
     outline: none;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    background-color: var(--background-white);
     font-weight: bold;
-    font-size: 13px;
+    font-size: var(--input-fontsize);
     font-family: "Freeman", sans-serif;
 }
 
@@ -48,7 +68,6 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 35px;
-    background-color: white;
     border-radius: 20px;
 }
 
@@ -66,7 +85,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    color: #18282f;
+    color: var(--font-color);
     padding: 10px;
 }
 
@@ -84,27 +103,27 @@
 
 .btn-add {
     cursor: pointer;
-    background-color: #FFB930;
+    background-color: var(--btn-color);
     border: none;
     color: #18282f;
     font-family: "Mouse Memoirs", sans-serif;
-    font-size: 23px;
+    font-size: var(--btn-fontsize);
     padding: 9px;
 
 }
 
 .btn-add:hover {
-    background-color: #ffd952;
+    background-color: var(--btn-hover);
 }
 
 .infoProduct {
     width: 155px;
-    color: #263941;
+    color: var(--h2-color);
 }
 
 .h2Prod {
-    font-size: 15px;
-    color: #263941;
+    font-size: var(--h2prod-fontsize);
+    color: var(--h2-color);
 }
 
 label {
@@ -112,7 +131,6 @@ label {
 }
 
 .notFoundError {
-    color: #a4a4a4;
     padding: 50px;
     display: none;
 
