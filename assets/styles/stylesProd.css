@@ -10,13 +10,14 @@
     align-items: center;
     text-align: center;
     gap: 20px;
+    background-color: #ffffff;
 }
 
 .h2-products {
     font-family: "Anton", sans-serif;
     font-size: 60px;
     font-style: normal;
-    padding-top: 30px;
+    padding: 30px;
     color: #263941;
 }
 
