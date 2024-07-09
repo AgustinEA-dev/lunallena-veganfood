@@ -1,7 +1,7 @@
 @keyframes slide-left {
 
   from {
-    transform: translateX(-1800px);
+    transform: translateX(-500px);
   }
 
   to {
