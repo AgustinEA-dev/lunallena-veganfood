@@ -6,10 +6,10 @@
 
 #hero {
     /* display: flex; */
-    animation-name: fade-in;
+    /* animation-name: fade-in; */
     animation-duration: 1s;
-    background: rgb(24, 40, 47);
-    background: linear-gradient(266deg, rgba(24, 40, 47, 1) 7%, rgba(42, 40, 21, 1) 28%, rgba(19, 32, 37, 1) 71%);
+    /* background: rgb(24, 40, 47);
+    background: linear-gradient(266deg, rgba(24, 40, 47, 1) 7%, rgba(42, 40, 21, 1) 28%, rgba(19, 32, 37, 1) 71%); */
 }
 
 .bg-img {
