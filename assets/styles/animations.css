@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 122px;
+}
+
 .nav-link:hover {
   border-bottom: 3px solid #FFB930;
 }
