@@ -25,10 +25,6 @@
     box-sizing: border-box;
 }
 
-* {
-    border: 1px solid red;
-}
-
 #products {
     display: flex;
     flex-direction: column;

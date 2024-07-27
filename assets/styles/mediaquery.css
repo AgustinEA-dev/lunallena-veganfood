@@ -79,7 +79,7 @@
     }
 }
 
-@media(max-width: 314px) {
+@media(max-width: 320px) {
     .h2-products {
         font-size: 25px;
     }
@@ -95,6 +95,11 @@
     .cardImg {
         width: 50px;
     }
+
+    form {
+        width: 200px;
+    }
+
 }
 
 @media(max-width:261px) {
@@ -111,6 +116,13 @@
 @media(max-width: 228px) {
     #logo {
         width: 80px;
+    }
+
+    #username,
+    #email,
+    #text-area,
+    #contact-btn {
+        width: 150px;
     }
 
 }
