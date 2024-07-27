@@ -25,6 +25,10 @@
     box-sizing: border-box;
 }
 
+* {
+    border: 1px solid red;
+}
+
 #products {
     display: flex;
     flex-direction: column;
@@ -57,7 +61,7 @@
 .cardImg {
     width: 200px;
     transition: all 0.2s;
-    
+
 }
 
 .products-container {
@@ -119,15 +123,21 @@
 }
 
 .infoProduct {
-    width: 155px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    /* width: 155px; */
     color: var(--h2-color);
 }
 
 .h2Prod {
+    width: fit-content;
     font-family: "Lora", serif;
     font-size: var(--h2prod-fontsize);
     font-weight: bold;
     color: var(--h2-color);
+
 }
 
 .notFoundError {

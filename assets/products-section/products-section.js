@@ -20,13 +20,14 @@ const createProductTemplate = (product) => {
 <div class="infoProduct">
 <h2 class ="h2Prod">${name}</h2>
 <h3>$${precio} x unidad</h3>
-</div>
 <button class="btn-add"
 data-id='${id}'
 data-name='${name}'
 data-img='${img}'
 data-precio='${precio}'
 >Agregar al carrito</button>
+</div>
+
 </div>`
 }
 

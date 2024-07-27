@@ -5,6 +5,10 @@
     gap: 10px;
 }
 
+.cart-content {
+    min-width: 400px;
+}
+
 .product-title {
     display: flex;
     flex-direction: column;
@@ -89,8 +93,10 @@ hr {
     font-size: 18px;
 }
 
-h3, h4 {
+h3,
+h4 {
     font-family: "Lora", serif;
+    width: fit-content;
 }
 
 .item-quantity {
