@@ -112,7 +112,7 @@
     }
 }
 
-@media(max-width: 228px) {
+@media(max-width: 234px) {
     #logo {
         width: 80px;
     }
@@ -124,6 +124,13 @@
         width: 150px;
     }
 
+    .btn-add {
+        font-size: 10px;
+    }
+
+    .card-container {
+        gap: 20px;
+    }
 }
 
 @media(max-width: 213px) {
