@@ -12,10 +12,10 @@
 
     /* font-size */
 
-    --h2-fontsize: 60px;
+    --h2-fontsize: 50px;
     --input-fontsize: 13px;
-    --btn-fontsize: 23px;
-    --h2prod-fontsize: 15px;
+    --btn-fontsize: 15px;
+    --h2prod-fontsize: 13px;
 
 }
 
@@ -35,7 +35,7 @@
 }
 
 .h2-products {
-    font-family: "Anton", sans-serif;
+    font-family: "Lora", serif;
     font-size: var(--h2-fontsize);
     font-style: normal;
     padding: 30px;
@@ -51,11 +51,13 @@
     background-color: var(--background-white);
     font-weight: bold;
     font-size: var(--input-fontsize);
-    font-family: "Freeman", sans-serif;
+    font-family: "Lora", serif;
 }
 
 .cardImg {
     width: 200px;
+    transition: all 0.2s;
+    
 }
 
 .products-container {
@@ -105,8 +107,8 @@
     cursor: pointer;
     background-color: var(--btn-color);
     border: none;
-    color: #18282f;
-    font-family: "Mouse Memoirs", sans-serif;
+    color: #2e4853;
+    font-family: "Anton", sans-serif;
     font-size: var(--btn-fontsize);
     padding: 9px;
 
@@ -122,15 +124,15 @@
 }
 
 .h2Prod {
+    font-family: "Lora", serif;
     font-size: var(--h2prod-fontsize);
+    font-weight: bold;
     color: var(--h2-color);
 }
 
-label {
-    padding-bottom: 5px;
-}
-
 .notFoundError {
+    color: #b0b6bb;
+    font-size: 30px;
     padding: 50px;
     display: none;
 

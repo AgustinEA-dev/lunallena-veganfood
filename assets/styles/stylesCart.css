@@ -32,7 +32,7 @@
 .empty-msg {
     font-size: 17px;
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Lora", serif;
     width: fit-content;
     padding: 0;
 }
@@ -73,7 +73,7 @@ hr {
 .data-container {
     display: flex;
     padding: 15px;
-    gap: 10px;
+    gap: 15px;
     border: 2px solid #d1fef1;
     border-radius: 12px;
     margin-top: 5px;
@@ -85,31 +85,35 @@ hr {
 }
 
 .h2Card {
-    font-size: 12px;
+    font-family: "Lora", serif;
+    font-size: 18px;
+}
+
+h3, h4 {
+    font-family: "Lora", serif;
 }
 
 .item-quantity {
+    font-family: "Lora", serif;
     font-size: 18px;
 }
 
 .total {
+    font-family: "Lora", serif;
     font-size: 20px;
     color: #d1fef1;
 }
 
 .quantity-handler {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family: "Lora", serif;
     border: 1px solid #d1fef1;
     border-radius: 5px;
     background-color: #d1fef1;
     color: #18282f;
+    cursor: pointer;
+    font-size: 15px;
     width: 30px;
     height: 30px;
-    text-align: center;
-    cursor: pointer;
-    font-size: 20px;
 }
 
 .item-handler {

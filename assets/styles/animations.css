@@ -38,3 +38,7 @@ html {
 .nav-link:hover {
   border-bottom: 3px solid #FFB930;
 }
+
+.cardImg:hover{
+  transform: translateY(-5px);
+}

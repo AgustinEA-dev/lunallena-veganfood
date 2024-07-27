@@ -3,14 +3,14 @@
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    background-image: url("../productos/background-vegetables.jpg");
     padding: 30px 0 30px 0;
-    color: #263941;
+    color: #ffffff;
+    background-color: #faf6de;
 }
 
 #form {
     padding: 20px;
-    background-color: rgb(231, 231, 231);
+    background-color: #324147;
     border-radius: 4px;
     font-size: 12px;
 }
@@ -88,11 +88,13 @@
     border-color: #ff3860;
 }
 
-#username,
-#email {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.h2-contact {
+    font-family: "Lora", serif;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
 }
 
-.h2-contact {
-    font-size: 60px;
+label {
+    padding: 5px;
 }

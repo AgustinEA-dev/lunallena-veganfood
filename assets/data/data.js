@@ -58,7 +58,7 @@ export const productsData = [
         id: 8
     },
     {
-        name: 'Pan integral con semillas',
+        name: 'Pan integral',
         precio: 2500,
         img: './productos/panes.png',
         id: 9
