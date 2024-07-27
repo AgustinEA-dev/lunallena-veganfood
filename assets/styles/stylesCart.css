@@ -46,7 +46,7 @@ hr {
 }
 
 .buy-btn {
-    font-size: 12px;
+    font-size: 19px;
     background-color: #d1fef1;
     color: #18282f;
     border: none;
@@ -125,6 +125,7 @@ h4 {
 .item-handler {
     margin-top: 5px;
     display: flex;
+    justify-content: flex-end;
     gap: 10px;
     align-items: center;
 }
