@@ -49,6 +49,15 @@
         display: none;
     }
 
+    .cart-content {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    #products input {
+        width: 250px;
+    }
+
 }
 
 @media(max-width: 474px) {
@@ -58,24 +67,17 @@
 
 }
 
-@media (max-width: 536px) {
-    .cart-content {
-        width: 100%;
-        border-radius: 0px;
-    }
-
-    #products input {
-        width: 250px;
-    }
-}
 
 @media (max-width: 524px) {
     .card-container {
         flex-direction: row;
+        gap: 40px;
+        border: 1px solid #b0b6bb;
+        border-radius: 10px;
     }
 
     .cardImg {
-        width: 100px;
+        width: 90px;
     }
 }
 
@@ -108,9 +110,6 @@
     #logo {
         width: 100px;
     }
-
-
-
 }
 
 @media(max-width: 228px) {

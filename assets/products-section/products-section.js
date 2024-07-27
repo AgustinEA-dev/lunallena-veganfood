@@ -26,6 +26,7 @@ data-name='${name}'
 data-img='${img}'
 data-precio='${precio}'
 >Agregar al carrito</button>
+<hr>
 </div>
 
 </div>`
