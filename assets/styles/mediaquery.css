@@ -60,14 +60,6 @@
 
 }
 
-@media(max-width: 474px) {
-    .cardImg {
-        width: 250px;
-    }
-
-}
-
-
 @media (max-width: 524px) {
     .card-container {
         flex-direction: row;
@@ -75,13 +67,9 @@
         border: 1px solid #b0b6bb;
         border-radius: 10px;
     }
-
-    .cardImg {
-        width: 90px;
-    }
 }
 
-@media(max-width: 320px) {
+@media(max-width: 360px) {
     .h2-products {
         font-size: 25px;
     }
@@ -98,9 +86,7 @@
         width: 50px;
     }
 
-    form {
-        width: 200px;
-    }
+ 
 
 }
 
