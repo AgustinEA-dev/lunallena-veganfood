@@ -67,6 +67,10 @@
         border: 1px solid #b0b6bb;
         border-radius: 10px;
     }
+
+    .cardImg {
+        width: 150px;
+    }
 }
 
 @media(max-width: 360px) {
@@ -86,7 +90,7 @@
         width: 50px;
     }
 
- 
+
 
 }
 
