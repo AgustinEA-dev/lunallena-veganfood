@@ -17,13 +17,23 @@
 #contact-btn {
     padding: 10px;
     margin-top: 10px;
-    /* width: 180px; */
     color: white;
     background-color: #569fd6;
     border: none;
     border-radius: 4px;
     font-size: 15px;
     cursor: pointer;
+}
+
+#text-area {
+    min-height: 150px;
+    max-height: 150px;
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    font-size: 15px;
 }
 
 .input-control {
@@ -37,11 +47,7 @@
     display: block;
     font-size: 12px;
     padding: 10px;
-    width: fit-content;
-}
-
-.input-control input:focus {
-    outline: none;
+    max-width: 181px;
 }
 
 .input-control.success input {
@@ -66,17 +72,6 @@
     padding: 5px 0 5px 0;
 }
 
-
-#text-area {
-    min-height: 150px;
-    max-height: 150px;
-    border: 2px solid #f0f0f0;
-    border-radius: 4px;
-    outline: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 10px;
-    font-size: 15px;
-}
 
 .input-control.success #text-area {
     border-color: #30bd55;
