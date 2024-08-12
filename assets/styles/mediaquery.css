@@ -107,13 +107,6 @@
         width: 80px;
     }
 
-    #username,
-    #email,
-    #text-area,
-    #contact-btn {
-        width: 150px;
-    }
-
     .btn-add {
         font-size: 10px;
     }
@@ -132,12 +125,19 @@
         font-size: 10px;
     }
 
-    #products input {
+    #search{
         width: 150px;
     }
 
     h2 .h2Prod {
         font-size: 9px;
+    }
+
+    #username,
+    #email,
+    #text-area,
+    #contact-btn {
+       max-width: 150px;
     }
 
 }
