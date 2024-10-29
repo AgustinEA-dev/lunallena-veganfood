@@ -9,24 +9,5 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
-    perspective: 1000px;
-    transform: translateZ(20px);
-    transition: transform;
-}
-
-h1 {
-    position: relative;
-    z-index: 0;
-}
-
-.logo-hero {
-    background-image: url("./logo/5__1_-removebg-preview.png");
-    background-size: cover;
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    left: 1000px;
-    top: 125px;
-    opacity: 0.2;
+    height: 100dvh;
 }
