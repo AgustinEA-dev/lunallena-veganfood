@@ -5,11 +5,14 @@
 }
 
 #hero {
-    background-image: url("../productos/portada1.jpg");
+    background-image: url("../productos/lunallena-back-mix.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     height: 100vh;
+    perspective: 1000px;
+    transform: translateZ(20px);
+    transition: transform;
 }
 
 h1 {
